@@ -1,0 +1,14 @@
+/* 
+  InfoPlist.strings
+  GoferDriver
+
+  Created by Trioangle on 28/02/19.
+  Copyright © 2019 Vignesh Palanivel. All rights reserved.
+*/
+"NSLocationWhenInUseUsageDescription" = "GoferDriver移動距離を計算するためにあなたの位置を追跡します.";
+"NSLocationAlwaysUsageDescription" = "GoferDriver移動距離を計算するためにあなたの位置を追跡します.";
+"NSLocationAlwaysAndWhenInUseUsageDescription" = "GoferDriver移動距離を計算するためにあなたの位置を追跡します.";
+"NSLocationUsageDescription" = "GoferDriver移動距離を計算するためにあなたの位置を追跡します.";
+"NSCameraUsageDescription" = "GoferDriverあなたが管理者とライダーにあなたの写真の閲覧を許可できるようにカメラアクセスを有効にする方法.";
+"NSPhotoLibraryUsageDescription" = "GoferDriverあなたが管理者とライダーにあなたの写真の閲覧を許可できるようにカメラアクセスを有効にする方法.";
+

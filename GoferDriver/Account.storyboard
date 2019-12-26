@@ -1,0 +1,624 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="ClanPro-Book.otf">
+            <string>ClanPro-Book</string>
+        </array>
+        <array key="ClanPro-Medium.otf">
+            <string>ClanPro-Medium</string>
+        </array>
+        <array key="ClanPro-NarrBook.otf">
+            <string>ClanPro-NarrBook</string>
+        </array>
+        <array key="ClanPro-NarrMedium.otf">
+            <string>ClanPro-NarrMedium</string>
+        </array>
+        <array key="ClanPro-NarrNews.otf">
+            <string>ClanPro-NarrNews</string>
+        </array>
+        <array key="ClanPro-News.otf">
+            <string>ClanPro-News</string>
+        </array>
+        <array key="uber-clone-mobile.ttf">
+            <string>uber-clone-mobile</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--New RegisterVC-->
+        <scene sceneID="xSc-Fk-JDv">
+            <objects>
+                <viewController storyboardIdentifier="NewRegisterVC" id="qKa-Ai-hHb" customClass="NewRegisterVC" customModule="GoferDriver" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fD2-do-jJQ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AHL-cK-tfK">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="65"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aiA-Lj-5jq">
+                                        <rect key="frame" x="8" y="20" width="45" height="45"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="aiA-Lj-5jq" secondAttribute="height" multiplier="1:1" id="MS0-Ua-Chw"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="uber-clone-mobile" family="uber-clone-mobile" pointSize="17"/>
+                                        <state key="normal" title="Q"/>
+                                        <connections>
+                                            <action selector="backAction:" destination="qKa-Ai-hHb" eventType="touchUpInside" id="MSx-CI-nqm"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SIGN UP" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eu5-2g-vs6">
+                                        <rect key="frame" x="129" y="20" width="62" height="45"/>
+                                        <fontDescription key="fontDescription" name="ClanPro-NarrMedium" family="Clan Pro" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Eu5-2g-vs6" secondAttribute="trailing" constant="8" id="2wC-Ww-AZl"/>
+                                    <constraint firstItem="Eu5-2g-vs6" firstAttribute="top" secondItem="aiA-Lj-5jq" secondAttribute="top" id="8SY-Ds-Z9y"/>
+                                    <constraint firstAttribute="height" constant="65" id="RLR-vg-Fgx"/>
+                                    <constraint firstAttribute="bottom" secondItem="aiA-Lj-5jq" secondAttribute="bottom" id="Zkx-Ci-0Vt"/>
+                                    <constraint firstItem="Eu5-2g-vs6" firstAttribute="bottom" secondItem="aiA-Lj-5jq" secondAttribute="bottom" id="kH7-Uu-ae4"/>
+                                    <constraint firstItem="aiA-Lj-5jq" firstAttribute="leading" secondItem="AHL-cK-tfK" secondAttribute="leading" constant="8" id="uHf-wX-F2l"/>
+                                    <constraint firstItem="Eu5-2g-vs6" firstAttribute="centerX" secondItem="AHL-cK-tfK" secondAttribute="centerX" id="wHY-oB-zZw"/>
+                                </constraints>
+                            </view>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gav-ij-oca">
+                                <rect key="frame" x="0.0" y="65" width="320" height="503"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zjH-iT-nMF">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="503"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="45" translatesAutoresizingMaskIntoConstraints="NO" id="sdN-j4-2hc">
+                                                <rect key="frame" x="18" y="20" width="284" height="455"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="16G-dH-Keu">
+                                                        <rect key="frame" x="0.0" y="0.0" width="284" height="55"/>
+                                                        <subviews>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="Ajz-wG-tOx" userLabel="FName">
+                                                                <rect key="frame" x="0.0" y="0.0" width="134.5" height="55"/>
+                                                                <subviews>
+                                                                    <textField opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="First Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QZL-O7-IAt">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="134.5" height="51.5"/>
+                                                                        <nil key="textColor"/>
+                                                                        <fontDescription key="fontDescription" name="ClanPro-News" family="Clan Pro" pointSize="14"/>
+                                                                        <textInputTraits key="textInputTraits"/>
+                                                                        <connections>
+                                                                            <action selector="textFieldDidChangeWithTextField:" destination="qKa-Ai-hHb" eventType="editingChanged" id="y77-X1-d6o"/>
+                                                                        </connections>
+                                                                    </textField>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8WU-cC-EXU">
+                                                                        <rect key="frame" x="0.0" y="54.5" width="134.5" height="0.5"/>
+                                                                        <color key="backgroundColor" name="ThemeInactive"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="height" constant="0.5" id="r62-jp-h99"/>
+                                                                        </constraints>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                        <nil key="textColor"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                </subviews>
+                                                            </stackView>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="Xw7-fq-L3I" userLabel="LName">
+                                                                <rect key="frame" x="149.5" y="0.0" width="134.5" height="55"/>
+                                                                <subviews>
+                                                                    <textField opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Last Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gOf-Hl-AkD">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="134.5" height="51.5"/>
+                                                                        <nil key="textColor"/>
+                                                                        <fontDescription key="fontDescription" name="ClanPro-News" family="Clan Pro" pointSize="14"/>
+                                                                        <textInputTraits key="textInputTraits"/>
+                                                                        <connections>
+                                                                            <action selector="textFieldDidChangeWithTextField:" destination="qKa-Ai-hHb" eventType="editingChanged" id="u3a-rg-7jZ"/>
+                                                                        </connections>
+                                                                    </textField>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WPt-QW-faX">
+                                                                        <rect key="frame" x="0.0" y="54.5" width="134.5" height="0.5"/>
+                                                                        <color key="backgroundColor" name="ThemeInactive"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="height" constant="0.5" id="4Ru-p4-xdm"/>
+                                                                        </constraints>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                        <nil key="textColor"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                </subviews>
+                                                            </stackView>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="55" id="BJj-5x-YUB"/>
+                                                        </constraints>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="WdD-nE-Bu5" userLabel="Email">
+                                                        <rect key="frame" x="0.0" y="100" width="284" height="55"/>
+                                                        <subviews>
+                                                            <textField opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email id" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Jmd-fs-Bks">
+                                                                <rect key="frame" x="0.0" y="0.0" width="284" height="51.5"/>
+                                                                <nil key="textColor"/>
+                                                                <fontDescription key="fontDescription" name="ClanPro-News" family="Clan Pro" pointSize="14"/>
+                                                                <textInputTraits key="textInputTraits"/>
+                                                                <connections>
+                                                                    <action selector="textFieldDidChangeWithTextField:" destination="qKa-Ai-hHb" eventType="editingChanged" id="fuA-N1-NIY"/>
+                                                                </connections>
+                                                            </textField>
+                                                            <label opaque="NO" userInteractionEnabled="NO" tag="3" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="16S-EC-caC">
+                                                                <rect key="frame" x="0.0" y="54.5" width="284" height="0.5"/>
+                                                                <color key="backgroundColor" name="ThemeInactive"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="0.5" id="cyx-Mh-ibZ"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="aBF-S1-79i" userLabel="Mobile">
+                                                        <rect key="frame" x="0.0" y="200" width="284" height="55"/>
+                                                        <subviews>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="ZvQ-XE-FtT">
+                                                                <rect key="frame" x="0.0" y="0.0" width="103" height="55"/>
+                                                                <subviews>
+                                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Yg-Yf-fMx">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="50" height="55"/>
+                                                                        <subviews>
+                                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="in.png" translatesAutoresizingMaskIntoConstraints="NO" id="LKk-e7-JZ0">
+                                                                                <rect key="frame" x="0.0" y="10" width="50" height="35"/>
+                                                                            </imageView>
+                                                                        </subviews>
+                                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        <constraints>
+                                                                            <constraint firstItem="LKk-e7-JZ0" firstAttribute="leading" secondItem="8Yg-Yf-fMx" secondAttribute="leading" id="Ola-tR-vcA"/>
+                                                                            <constraint firstAttribute="trailing" secondItem="LKk-e7-JZ0" secondAttribute="trailing" id="UJN-Ni-hNW"/>
+                                                                            <constraint firstItem="LKk-e7-JZ0" firstAttribute="centerY" secondItem="8Yg-Yf-fMx" secondAttribute="centerY" id="YhA-lz-BdZ"/>
+                                                                            <constraint firstItem="LKk-e7-JZ0" firstAttribute="top" secondItem="8Yg-Yf-fMx" secondAttribute="top" constant="10" id="d48-wQ-1I0"/>
+                                                                            <constraint firstAttribute="width" constant="50" id="fUc-0y-Dpi"/>
+                                                                        </constraints>
+                                                                    </view>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+91" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T1b-7v-opV">
+                                                                        <rect key="frame" x="53" y="0.0" width="50" height="55"/>
+                                                                        <fontDescription key="fontDescription" name="ClanPro-News" family="Clan Pro" pointSize="14"/>
+                                                                        <nil key="textColor"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                </subviews>
+                                                            </stackView>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Ccn-ln-6gi">
+                                                                <rect key="frame" x="111" y="0.0" width="173" height="55"/>
+                                                                <subviews>
+                                                                    <textField opaque="NO" userInteractionEnabled="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Mobile Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DP3-mk-SaS">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="173" height="54.5"/>
+                                                                        <nil key="textColor"/>
+                                                                        <fontDescription key="fontDescription" name="ClanPro-News" family="Clan Pro" pointSize="14"/>
+                                                                        <textInputTraits key="textInputTraits"/>
+                                                                        <connections>
+                                                                            <action selector="textFieldDidChangeWithTextField:" destination="qKa-Ai-hHb" eventType="editingChanged" id="WIP-vx-Ljs"/>
+                                                                        </connections>
+                                                                    </textField>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" tag="4" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DLq-zw-6b2">
+                                                                        <rect key="frame" x="0.0" y="54.5" width="173" height="0.5"/>
+                                                                        <color key="backgroundColor" name="ThemeInactive"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="height" constant="0.5" id="LLv-oI-oyg"/>
+                                                                        </constraints>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                        <nil key="textColor"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                </subviews>
+                                                            </stackView>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="sxQ-Aj-2b5" userLabel="Password">
+                                                        <rect key="frame" x="0.0" y="300" width="284" height="55"/>
+                                                        <subviews>
+                                                            <textField opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4VZ-xd-ysZ">
+                                                                <rect key="frame" x="0.0" y="0.0" width="284" height="51.5"/>
+                                                                <nil key="textColor"/>
+                                                                <fontDescription key="fontDescription" name="ClanPro-News" family="Clan Pro" pointSize="14"/>
+                                                                <textInputTraits key="textInputTraits"/>
+                                                                <connections>
+                                                                    <action selector="textFieldDidChangeWithTextField:" destination="qKa-Ai-hHb" eventType="editingChanged" id="y1Z-1r-0fi"/>
+                                                                </connections>
+                                                            </textField>
+                                                            <label opaque="NO" userInteractionEnabled="NO" tag="5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jnb-Mm-RyF">
+                                                                <rect key="frame" x="0.0" y="54.5" width="284" height="0.5"/>
+                                                                <color key="backgroundColor" name="ThemeInactive"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="0.5" id="EPQ-5M-k9Z"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="fyd-wl-utc" userLabel="City">
+                                                        <rect key="frame" x="0.0" y="400" width="284" height="55"/>
+                                                        <subviews>
+                                                            <textField opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="City" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1gH-tO-Aqf">
+                                                                <rect key="frame" x="0.0" y="0.0" width="284" height="51.5"/>
+                                                                <nil key="textColor"/>
+                                                                <fontDescription key="fontDescription" name="ClanPro-News" family="Clan Pro" pointSize="14"/>
+                                                                <textInputTraits key="textInputTraits"/>
+                                                                <connections>
+                                                                    <action selector="textFieldDidChangeWithTextField:" destination="qKa-Ai-hHb" eventType="editingChanged" id="pdS-yd-g15"/>
+                                                                </connections>
+                                                            </textField>
+                                                            <label opaque="NO" userInteractionEnabled="NO" tag="6" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zWn-he-QP2">
+                                                                <rect key="frame" x="0.0" y="54.5" width="284" height="0.5"/>
+                                                                <color key="backgroundColor" name="ThemeInactive"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="0.5" id="aEC-r6-G30"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="2Oq-fz-f0P" userLabel="referral">
+                                                        <rect key="frame" x="0.0" y="455" width="284" height="3.5"/>
+                                                        <subviews>
+                                                            <textField opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Referral (Optional)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wOE-Z8-ea0">
+                                                                <rect key="frame" x="0.0" y="0.0" width="284" height="0.0"/>
+                                                                <nil key="textColor"/>
+                                                                <fontDescription key="fontDescription" name="ClanPro-NarrNews" family="Clan Pro" pointSize="17"/>
+                                                                <textInputTraits key="textInputTraits"/>
+                                                                <connections>
+                                                                    <action selector="textFieldDidChangeWithTextField:" destination="qKa-Ai-hHb" eventType="editingChanged" id="oli-eJ-kNG"/>
+                                                                </connections>
+                                                            </textField>
+                                                            <label opaque="NO" userInteractionEnabled="NO" tag="7" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VHx-dh-ZFc">
+                                                                <rect key="frame" x="0.0" y="3" width="284" height="0.5"/>
+                                                                <color key="backgroundColor" name="ThemeInactive"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="0.5" id="d79-RW-Kaq"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="sdN-j4-2hc" secondAttribute="trailing" constant="18" id="1AB-Fz-uS9"/>
+                                            <constraint firstItem="sdN-j4-2hc" firstAttribute="leading" secondItem="zjH-iT-nMF" secondAttribute="leading" constant="18" id="1MK-Sm-SOt"/>
+                                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="sdN-j4-2hc" secondAttribute="bottom" constant="15" id="Fi3-LY-xCG"/>
+                                            <constraint firstItem="sdN-j4-2hc" firstAttribute="top" secondItem="zjH-iT-nMF" secondAttribute="top" constant="20" id="c0f-dn-z37"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="zjH-iT-nMF" secondAttribute="trailing" id="2GX-Cf-Wu7"/>
+                                    <constraint firstItem="zjH-iT-nMF" firstAttribute="top" secondItem="Gav-ij-oca" secondAttribute="top" id="Ivf-F9-Ase"/>
+                                    <constraint firstItem="zjH-iT-nMF" firstAttribute="width" secondItem="Gav-ij-oca" secondAttribute="width" id="cLj-dY-A1I"/>
+                                    <constraint firstAttribute="bottom" secondItem="zjH-iT-nMF" secondAttribute="bottom" id="gDc-k6-BCb"/>
+                                    <constraint firstItem="zjH-iT-nMF" firstAttribute="height" secondItem="Gav-ij-oca" secondAttribute="height" priority="250" id="xEg-cr-nOw"/>
+                                    <constraint firstItem="zjH-iT-nMF" firstAttribute="leading" secondItem="Gav-ij-oca" secondAttribute="leading" id="y87-Y7-8rN"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="AHL-cK-tfK" firstAttribute="trailing" secondItem="6mG-z6-47u" secondAttribute="trailing" id="6JP-Pq-tah"/>
+                            <constraint firstItem="Gav-ij-oca" firstAttribute="top" secondItem="AHL-cK-tfK" secondAttribute="bottom" id="72j-Vy-FWe"/>
+                            <constraint firstItem="Gav-ij-oca" firstAttribute="leading" secondItem="6mG-z6-47u" secondAttribute="leading" id="CNI-Ni-ELu"/>
+                            <constraint firstItem="AHL-cK-tfK" firstAttribute="leading" secondItem="6mG-z6-47u" secondAttribute="leading" id="bz0-9l-fE9"/>
+                            <constraint firstItem="Gav-ij-oca" firstAttribute="trailing" secondItem="6mG-z6-47u" secondAttribute="trailing" id="cFs-Vr-IYq"/>
+                            <constraint firstItem="6mG-z6-47u" firstAttribute="top" secondItem="aiA-Lj-5jq" secondAttribute="top" id="naU-Of-N0v"/>
+                            <constraint firstItem="AHL-cK-tfK" firstAttribute="top" secondItem="fD2-do-jJQ" secondAttribute="top" id="s49-RH-ZTX"/>
+                            <constraint firstItem="Gav-ij-oca" firstAttribute="bottom" secondItem="6mG-z6-47u" secondAttribute="bottom" id="yP7-Wt-V1G"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6mG-z6-47u"/>
+                    </view>
+                    <connections>
+                        <outlet property="alreadySingInLbl" destination="GyN-ir-mDN" id="hEt-bP-0fD"/>
+                        <outlet property="backBtn" destination="aiA-Lj-5jq" id="nu4-cW-5yb"/>
+                        <outlet property="bottomSignInView" destination="NUI-uk-Fhs" id="z7z-ou-wPu"/>
+                        <outlet property="bottomSignUpView" destination="Q3r-Yd-onx" id="ktj-pE-MDg"/>
+                        <outlet property="dialCode" destination="T1b-7v-opV" id="7ck-2n-6wQ"/>
+                        <outlet property="fieldsScrollView" destination="Gav-ij-oca" id="5Wh-9a-AaU"/>
+                        <outlet property="flagImg" destination="LKk-e7-JZ0" id="TWW-S2-VX1"/>
+                        <outlet property="pageTitleLbl" destination="Eu5-2g-vs6" id="EYQ-9A-bWK"/>
+                        <outlet property="scrollViewMainChild" destination="zjH-iT-nMF" id="9r4-Il-bt6"/>
+                        <outlet property="signInBtn" destination="fiy-XQ-p92" id="lgH-vD-5gH"/>
+                        <outlet property="signUpBtn" destination="Rfw-yq-h3y" id="J1w-zO-QDy"/>
+                        <outlet property="terms_and_condition" destination="1IN-IS-N3G" id="ban-hn-sGm"/>
+                        <outletCollection property="fieldCollection" destination="QZL-O7-IAt" collectionClass="NSMutableArray" id="Xog-p7-rS6"/>
+                        <outletCollection property="fieldCollection" destination="gOf-Hl-AkD" collectionClass="NSMutableArray" id="EaR-0o-MAZ"/>
+                        <outletCollection property="fieldCollection" destination="Jmd-fs-Bks" collectionClass="NSMutableArray" id="EOq-Py-RKI"/>
+                        <outletCollection property="fieldCollection" destination="DP3-mk-SaS" collectionClass="NSMutableArray" id="5hg-kr-eRK"/>
+                        <outletCollection property="fieldCollection" destination="4VZ-xd-ysZ" collectionClass="NSMutableArray" id="AK5-bq-wAJ"/>
+                        <outletCollection property="fieldCollection" destination="1gH-tO-Aqf" collectionClass="NSMutableArray" id="0fP-jg-8c7"/>
+                        <outletCollection property="fieldCollection" destination="wOE-Z8-ea0" collectionClass="NSMutableArray" id="dGH-uL-7Fb"/>
+                        <outletCollection property="barCollection" destination="8WU-cC-EXU" collectionClass="NSMutableArray" id="fTY-Os-art"/>
+                        <outletCollection property="barCollection" destination="WPt-QW-faX" collectionClass="NSMutableArray" id="YG7-ie-xST"/>
+                        <outletCollection property="barCollection" destination="16S-EC-caC" collectionClass="NSMutableArray" id="Sb5-Kz-J2K"/>
+                        <outletCollection property="barCollection" destination="DLq-zw-6b2" collectionClass="NSMutableArray" id="xrf-1v-ZOX"/>
+                        <outletCollection property="barCollection" destination="jnb-Mm-RyF" collectionClass="NSMutableArray" id="bWC-f8-jfv"/>
+                        <outletCollection property="barCollection" destination="zWn-he-QP2" collectionClass="NSMutableArray" id="5Gk-9U-63E"/>
+                        <outletCollection property="barCollection" destination="VHx-dh-ZFc" collectionClass="NSMutableArray" id="M23-lm-Le9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WFd-rC-KkA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <view contentMode="scaleToFill" id="Q3r-Yd-onx">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="81"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rfw-yq-h3y">
+                            <rect key="frame" x="254" y="10" width="61" height="61"/>
+                            <color key="backgroundColor" name="ThemeMain"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="Rfw-yq-h3y" secondAttribute="height" multiplier="1:1" id="1qM-5r-UwZ"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="uber-clone-mobile" family="uber-clone-mobile" pointSize="25"/>
+                            <state key="normal" title="I">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="localizeTitle" value="YES"/>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="signUpAction:" destination="qKa-Ai-hHb" eventType="touchUpInside" id="uXB-nv-ELp"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1IN-IS-N3G">
+                            <rect key="frame" x="15" y="5" width="229" height="71"/>
+                            <attributedString key="attributedText">
+                                <fragment content="By continuing. I confirm that i have read and agree to the ">
+                                    <attributes>
+                                        <font key="NSFont" metaFont="smallSystem"/>
+                                        <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                    </attributes>
+                                </fragment>
+                                <fragment content="Terms &amp; Conditions ">
+                                    <attributes>
+                                        <color key="NSColor" red="0.10980392156862745" green="0.36078431372549019" blue="0.60392156862745094" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <font key="NSFont" metaFont="smallSystem"/>
+                                        <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                    </attributes>
+                                </fragment>
+                                <fragment content="and">
+                                    <attributes>
+                                        <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <font key="NSFont" metaFont="smallSystem"/>
+                                        <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                    </attributes>
+                                </fragment>
+                                <fragment content=" Privacy Policy">
+                                    <attributes>
+                                        <color key="NSColor" red="0.10980392156862745" green="0.36078431372549019" blue="0.60392156862745094" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <font key="NSFont" metaFont="smallSystem"/>
+                                        <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                    </attributes>
+                                </fragment>
+                            </attributedString>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="0.98104643485915488" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="1IN-IS-N3G" firstAttribute="leading" secondItem="lGP-NR-KZZ" secondAttribute="leading" constant="15" id="0ay-gU-TfL"/>
+                        <constraint firstItem="Rfw-yq-h3y" firstAttribute="top" secondItem="lGP-NR-KZZ" secondAttribute="top" constant="10" id="HS0-OF-MdX"/>
+                        <constraint firstItem="lGP-NR-KZZ" firstAttribute="bottom" secondItem="1IN-IS-N3G" secondAttribute="bottom" constant="5" id="JoY-uX-f88"/>
+                        <constraint firstItem="1IN-IS-N3G" firstAttribute="top" secondItem="lGP-NR-KZZ" secondAttribute="top" constant="5" id="mNX-L9-tD2"/>
+                        <constraint firstItem="Rfw-yq-h3y" firstAttribute="leading" secondItem="1IN-IS-N3G" secondAttribute="trailing" constant="10" id="r7H-qk-yCn"/>
+                        <constraint firstItem="lGP-NR-KZZ" firstAttribute="bottom" secondItem="Rfw-yq-h3y" secondAttribute="bottom" constant="10" id="tlL-Zy-H11"/>
+                        <constraint firstItem="lGP-NR-KZZ" firstAttribute="trailing" secondItem="Rfw-yq-h3y" secondAttribute="trailing" constant="5" id="yfX-B3-GTX"/>
+                    </constraints>
+                    <viewLayoutGuide key="safeArea" id="lGP-NR-KZZ"/>
+                </view>
+                <view hidden="YES" contentMode="scaleToFill" id="NUI-uk-Fhs">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="56"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fiy-XQ-p92">
+                            <rect key="frame" x="212" y="8" width="100" height="40"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="100" id="Htg-Ay-VqN"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="ClanPro-News" family="Clan Pro" pointSize="17"/>
+                            <state key="normal" title="Login">
+                                <color key="titleColor" red="0.91210061310000001" green="0.67901152369999995" blue="0.067082889379999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="localizeTitle" value="YES"/>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="signInAction:" destination="qKa-Ai-hHb" eventType="touchUpInside" id="qcs-mp-ce0"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GyN-ir-mDN">
+                            <rect key="frame" x="8" y="8" width="196" height="40"/>
+                            <fontDescription key="fontDescription" name="ClanPro-Book" family="Clan Pro" pointSize="13"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" name="ThemeMain"/>
+                    <constraints>
+                        <constraint firstItem="GyN-ir-mDN" firstAttribute="top" secondItem="NUI-uk-Fhs" secondAttribute="top" constant="8" id="5NJ-EN-tfI"/>
+                        <constraint firstItem="bht-7J-T35" firstAttribute="bottom" secondItem="fiy-XQ-p92" secondAttribute="bottom" constant="8" id="8Ue-ID-rkd"/>
+                        <constraint firstItem="GyN-ir-mDN" firstAttribute="leading" secondItem="bht-7J-T35" secondAttribute="leading" constant="8" id="LS0-f5-oPI"/>
+                        <constraint firstAttribute="bottom" secondItem="GyN-ir-mDN" secondAttribute="bottom" constant="8" id="hke-vq-Vmj"/>
+                        <constraint firstItem="fiy-XQ-p92" firstAttribute="leading" secondItem="GyN-ir-mDN" secondAttribute="trailing" constant="8" id="kAL-e2-Ap2"/>
+                        <constraint firstItem="bht-7J-T35" firstAttribute="trailing" secondItem="fiy-XQ-p92" secondAttribute="trailing" constant="8" id="sWY-fS-XeY"/>
+                        <constraint firstItem="fiy-XQ-p92" firstAttribute="top" secondItem="bht-7J-T35" secondAttribute="top" constant="8" id="wa8-Tc-Wbx"/>
+                    </constraints>
+                    <viewLayoutGuide key="safeArea" id="bht-7J-T35"/>
+                </view>
+            </objects>
+            <point key="canvasLocation" x="-56.25" y="260.91549295774649"/>
+        </scene>
+        <!--Mobile ValidationVC-->
+        <scene sceneID="3lu-IH-RNX">
+            <objects>
+                <viewController storyboardIdentifier="MobileValidationVCID" id="55E-Jr-1aL" customClass="MobileValidationVC" customModule="GoferDriver" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="JI2-y5-lqY">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bw8-ix-tL6">
+                                <rect key="frame" x="15" y="58" width="290" height="490"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mobileverify" translatesAutoresizingMaskIntoConstraints="NO" id="hgN-HH-bUs">
+                                        <rect key="frame" x="70" y="8" width="150" height="100"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="hgN-HH-bUs" secondAttribute="height" multiplier="3:2" id="ziz-Ac-4XI"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" text="Mobile Verfication" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EUt-eB-Hr8">
+                                        <rect key="frame" x="0.0" y="123" width="290" height="24.5"/>
+                                        <fontDescription key="fontDescription" name="ClanPro-NarrMedium" family="Clan Pro" pointSize="19"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" text="Please enter your mobile  number" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dyM-m9-d8k">
+                                        <rect key="frame" x="0.0" y="152.5" width="290" height="48.5"/>
+                                        <fontDescription key="fontDescription" name="ClanPro-NarrBook" family="Clan Pro" pointSize="19"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8u8-2L-tjt">
+                                        <rect key="frame" x="0.0" y="216" width="290" height="80"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="80" id="ZVW-wS-Dh5"/>
+                                        </constraints>
+                                    </view>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="FjA-XJ-Ao8">
+                                        <rect key="frame" x="0.0" y="416.5" width="290" height="58.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Terms and condition" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QeU-xI-Gab">
+                                                <rect key="frame" x="0.0" y="0.0" width="290" height="24.5"/>
+                                                <fontDescription key="fontDescription" name="ClanPro-NarrBook" family="Clan Pro" pointSize="19"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yzv-qL-rc3">
+                                                <rect key="frame" x="0.0" y="24.5" width="290" height="34"/>
+                                                <fontDescription key="fontDescription" name="ClanPro-Medium" family="Clan Pro" pointSize="17"/>
+                                                <state key="normal" title="Resend OTP">
+                                                    <color key="titleColor" name="ThemeLight"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="bottomBtnAction:" destination="55E-Jr-1aL" eventType="touchUpInside" id="0i2-zD-sFR"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RNF-O3-yiS">
+                                        <rect key="frame" x="115" y="341.5" width="60" height="60"/>
+                                        <color key="backgroundColor" name="ThemeLight"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="45h-5m-tNe"/>
+                                            <constraint firstAttribute="width" secondItem="RNF-O3-yiS" secondAttribute="height" multiplier="1:1" id="fLb-Ob-5uf"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="uber-clone-mobile" family="uber-clone-mobile" pointSize="17"/>
+                                        <state key="normal" title="I">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="nextAction:" destination="55E-Jr-1aL" eventType="touchUpInside" id="adh-Zi-F8h"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="FjA-XJ-Ao8" secondAttribute="trailing" id="4bN-kk-fdv"/>
+                                    <constraint firstItem="dyM-m9-d8k" firstAttribute="leading" secondItem="bw8-ix-tL6" secondAttribute="leading" id="4y5-ga-MYj"/>
+                                    <constraint firstAttribute="trailing" secondItem="dyM-m9-d8k" secondAttribute="trailing" id="DU1-6h-iRV"/>
+                                    <constraint firstItem="FjA-XJ-Ao8" firstAttribute="leading" secondItem="bw8-ix-tL6" secondAttribute="leading" id="EQp-ze-HwZ"/>
+                                    <constraint firstAttribute="trailing" secondItem="8u8-2L-tjt" secondAttribute="trailing" id="QI2-tt-Bhb"/>
+                                    <constraint firstAttribute="bottom" secondItem="FjA-XJ-Ao8" secondAttribute="bottom" constant="15" id="QRo-Ju-KGW"/>
+                                    <constraint firstItem="8u8-2L-tjt" firstAttribute="top" secondItem="dyM-m9-d8k" secondAttribute="bottom" constant="15" id="VMZ-EB-J9D"/>
+                                    <constraint firstItem="RNF-O3-yiS" firstAttribute="centerX" secondItem="bw8-ix-tL6" secondAttribute="centerX" id="acD-FF-5DE"/>
+                                    <constraint firstItem="EUt-eB-Hr8" firstAttribute="leading" secondItem="bw8-ix-tL6" secondAttribute="leading" id="gJ0-hC-9iz"/>
+                                    <constraint firstItem="hgN-HH-bUs" firstAttribute="top" relation="greaterThanOrEqual" secondItem="bw8-ix-tL6" secondAttribute="top" constant="8" id="heO-ew-lvT"/>
+                                    <constraint firstItem="dyM-m9-d8k" firstAttribute="top" secondItem="EUt-eB-Hr8" secondAttribute="bottom" constant="5" id="ja9-HA-3dw"/>
+                                    <constraint firstItem="8u8-2L-tjt" firstAttribute="centerY" secondItem="bw8-ix-tL6" secondAttribute="centerY" priority="755" constant="-25" id="p01-ee-nz8"/>
+                                    <constraint firstItem="8u8-2L-tjt" firstAttribute="leading" secondItem="bw8-ix-tL6" secondAttribute="leading" id="q6s-nL-DxO"/>
+                                    <constraint firstItem="EUt-eB-Hr8" firstAttribute="top" secondItem="hgN-HH-bUs" secondAttribute="bottom" constant="15" id="q9B-gw-eBY"/>
+                                    <constraint firstAttribute="trailing" secondItem="EUt-eB-Hr8" secondAttribute="trailing" id="rHS-xz-xPU"/>
+                                    <constraint firstItem="RNF-O3-yiS" firstAttribute="top" relation="greaterThanOrEqual" secondItem="8u8-2L-tjt" secondAttribute="bottom" constant="15" id="sIu-Su-i0P"/>
+                                    <constraint firstItem="hgN-HH-bUs" firstAttribute="centerX" secondItem="bw8-ix-tL6" secondAttribute="centerX" id="u8U-sK-wTs"/>
+                                    <constraint firstItem="FjA-XJ-Ao8" firstAttribute="top" secondItem="RNF-O3-yiS" secondAttribute="bottom" constant="15" id="vF6-Vh-cQj"/>
+                                    <constraint firstItem="hgN-HH-bUs" firstAttribute="width" secondItem="bw8-ix-tL6" secondAttribute="height" multiplier="15:49" id="wkJ-cS-m2k"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rzn-PG-a9x">
+                                <rect key="frame" x="5" y="20" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="rzn-PG-a9x" secondAttribute="height" multiplier="1:1" id="QHX-dQ-TmU"/>
+                                    <constraint firstAttribute="height" constant="30" id="gR5-fH-DLj"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="uber-clone-mobile" family="uber-clone-mobile" pointSize="17"/>
+                                <state key="normal" title="f">
+                                    <color key="titleColor" name="ThemMain"/>
+                                </state>
+                                <connections>
+                                    <action selector="backAction:" destination="55E-Jr-1aL" eventType="touchUpInside" id="dXF-q1-Qpb"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="bw8-ix-tL6" firstAttribute="leading" secondItem="6fo-cv-29o" secondAttribute="leading" constant="15" id="Eym-os-HRM"/>
+                            <constraint firstItem="6fo-cv-29o" firstAttribute="trailing" secondItem="bw8-ix-tL6" secondAttribute="trailing" constant="15" id="FZX-rR-3s7"/>
+                            <constraint firstItem="6fo-cv-29o" firstAttribute="bottom" secondItem="bw8-ix-tL6" secondAttribute="bottom" constant="20" id="Fnx-he-1PY"/>
+                            <constraint firstItem="rzn-PG-a9x" firstAttribute="leading" secondItem="6fo-cv-29o" secondAttribute="leading" constant="5" id="ONa-Rz-CYd"/>
+                            <constraint firstItem="rzn-PG-a9x" firstAttribute="top" secondItem="6fo-cv-29o" secondAttribute="top" id="gce-tI-mx5"/>
+                            <constraint firstItem="bw8-ix-tL6" firstAttribute="top" secondItem="rzn-PG-a9x" secondAttribute="bottom" constant="8" id="vML-r9-68T"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6fo-cv-29o"/>
+                    </view>
+                    <connections>
+                        <outlet property="backBtn" destination="rzn-PG-a9x" id="NJX-z5-GA1"/>
+                        <outlet property="bottomBtn" destination="yzv-qL-rc3" id="McX-HY-ICv"/>
+                        <outlet property="bottomDescLbl" destination="QeU-xI-Gab" id="hoV-N3-LWt"/>
+                        <outlet property="contentHolderView" destination="bw8-ix-tL6" id="uw0-jA-iRP"/>
+                        <outlet property="descLbl" destination="dyM-m9-d8k" id="ZrJ-cE-o6R"/>
+                        <outlet property="inputFieldHolderView" destination="8u8-2L-tjt" id="nWC-ys-Sl3"/>
+                        <outlet property="nextBtn" destination="RNF-O3-yiS" id="Fve-Z3-q4I"/>
+                        <outlet property="titleIV" destination="hgN-HH-bUs" id="ScU-QI-I3g"/>
+                        <outlet property="titleLbl" destination="EUt-eB-Hr8" id="LM9-r5-c4h"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gF0-8K-Y7B" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="703" y="261"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="in.png" width="36" height="36"/>
+        <image name="mobileverify" width="512" height="512"/>
+        <namedColor name="ThemMain">
+            <color name="ibMissingResourceColor" catalog="#$assets-com.apple.dt.DVTKit" colorSpace="catalog"/>
+        </namedColor>
+        <namedColor name="ThemeInactive">
+            <color red="0.64313725490196083" green="0.64313725490196083" blue="0.6705882352941176" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="ThemeLight">
+            <color red="0.10980392156862745" green="0.69411764705882351" blue="0.81568627450980391" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="ThemeMain">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

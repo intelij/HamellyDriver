@@ -1,0 +1,233 @@
+/*
+ Localizable.strings
+ GoferDriver
+ 
+ Created by Trioangle on 17/07/18.
+ Copyright © 2018 Vignesh Palanivel. All rights reserved.
+ */
+"HOME" = "الصفحة الرئيسية";
+"EARNINGS" = "العائد";
+"RATINGS" = "تقييم";
+"ACCOUNT" = "الحساب";
+"Trips & Payments" = "رحلات والمدفوعات";
+"Sunday" =  "الأحد";
+"Monday" = "الإثنين";
+"Tuesday" = "الثلاثاء";
+"Wednesday" = "الأربعاء";
+"Thursday" = "الخميس";
+"Friday" = "يوم الجمعة";
+"Saturday" = "يوم السبت";
+"Password" = "كلمه السر";
+"No internet connection." = "لا يوجد اتصال بالإنترنت.";
+
+"Your OTP Code doesn't match" = "مدونة مكتب المدعي العام الخاص بك لا تطابق";
+"Resend Code" = "أعد إرسال الرمز";
+"Cancelling Request..." = "إلغاء طلب ...";
+"Already Accepted" = "قبلا قبول شده";
+"Already accepted by someone" = "قبلت بالفعل من قبل شخص";
+"%@ MINUTES" = "الدقائق";
+"%@ MINUTE" = "دقیقهاللحظة";
+
+"Driver's License - (Back/Reverse)" = "رخصة القيادة - (العودة / عكسي)";
+"Driver's License - (Front)" = "رخصة القيادة - (الجبهة)";
+"Motor Insurance Certificate" = "شهادة التأمين للسيارات";
+"Certificate of Registration" = "شهادة تسجيل";
+"Contract Carriage Permit" = "عقد نقل تصريح";
+
+"Document Section" = "القسم المستند";
+"THIS WEEK" = "هذا الاسبوع";
+"Offline" = "غير متصل على الانترنت";
+"Online" = "عبر الانترنت";
+"Documents" = "مستندات";
+"Payout" = "سيصرف";
+"Sign Out" = "خروج";
+"First Name" = "الاسم الاول";
+"Last Name" = "الكنية";
+"Email" = "البريد الإلكتروني";
+"Phone Number" = "رقم الهاتف";
+"Address Line 1" = "العنوان الأول";
+"Address Line 2" = "سطر العنوان 2";
+"City" = "مدينة";
+"Postal Code" = "الرمز البريدي";
+"State" = "حالة";
+"Currency" = "دقة";
+"Personal Information" = "معلومات شخصية";
+"Address" = "عنوان";
+"Trip" = "رحلة قصيرة";
+
+"Rider No show" = "رايدر لا تظهر";
+"Rider requested cancel" = "طلب رايدر إلغاء";
+"Wrong address shown" = "عنوان خاطئ أظهرت";
+"Involved in an accident" = "تشارك في وقوع حادث";
+"Do not charge Rider" = "لا تهمة رايدر";
+"You have no today trips" = "لا يوجد لديك رحلات اليوم";
+"You have no past trips" = "لا يوجد لديك رحلات الماضية";
+"Add Payout Method" = "إضافة أسلوب دفع تعويضات";
+"Most recent payout: %@ %@" = "الأحدث دفع تعويضات";
+"Last trip: %@ %@" = "آخر رحلة";
+"Most recent payout: %@ 0" = "الأحدث دفع تعويضات";
+"Last trip: %@ 0" = "آخر رحلة";
+"Trip ID:" = "رقم الرحلة:";
+"Total Payout" = "سيصرف مجموع";
+"CASH COLLECTED" = "النقد جمعها";
+"Cash collected" = "النقد جمعها";
+"MINS" = "دقيقة";
+"To add a new payout. Create a email for your" = "لإضافة عائد جديد. قم بإنشاء بريد إلكتروني لحسابلإضافة عائد جديد. انشاء بريد الكتروني لجهودكم";
+"account." = "الحساب.";
+"Scheduled" = "المقرر";
+"Rating" = "تقييم";
+"Cancelled" = "ألغيت";
+"Completed" = "منجز";
+"Payment" = "دفع";
+"BEGIN TRIP" = "ابدأ رحلة";
+"END TRIP" = "رحلة النهاية";
+"Begin trip" =  "ابدأ رحلة";
+"End trip" = "رحلة النهاية";
+"Pending" = "قيد الانتظار";
+"Upload failed. Please try again" = "التحميل فشل. حاول مرة اخرى";
+
+//payment detail page:
+"Base Fare" = "الاجرة الاساسية";
+"Distance Fare" = "أجرة بعد";
+"Time Fare" = "أجرة الوقت";
+"Total Trip Fare" = "مجموع أجرة رحلة";
+"Wallet Amount" = "مبلغ المحفظة";
+"Admin's Amount" = "المبلغ مسؤول في";
+"Collectable Cash" = "تحصيل النقدية";
+"Total Payout" = "سيصرف مجموع";
+"Driver Payout" = "سيصرف سائق";
+"Owe Amount" = "مدينون المبلغ";
+
+//button Tile payment page,dricer home
+"WAITING FOR PAYMENT" = "في انتظار دفع";
+"PAID" = "دفع";
+"WAITING FOR RIDER CONFIRMATION" = "في انتظار تأكيد متسابق";
+"Payment Accept" = "الدفع قبول";
+"Active" = "فعالنشيط";
+
+//alertView
+"Ok" = "حسنا";
+"Success" = "نجاح";
+"Message" = "رسالة";
+"Message!!!" = "رسالة!!!";
+"Device has no camera" = "جهاز ليس لديه كاميرا";
+"Error" = "خطأ";
+"Warning" = "تحذير";
+"Please give permission to access photo" = "يرجى إعطاء إذن للوصول إلى صورة";
+"Trip cancelled by rider" = "رحلة ألغيت من قبل متسابق";
+"Rider successfully paid" = "رايدر بنجاح دفع";
+"Please give rating" = "يرجى إعطاء تصنيف";
+"Payment Completed successfully" = "الدفع بنجاح";
+"Please enable Push Notification in settings for continue to login" = "الرجاء تمكين إعلام دفع في إعدادات الاستمرار للدخول";
+"camera use" = "استخدام الكاميرا";
+"photos use" = " صور استخدام";
+"track your position to calculate the trip distance" =  "تتبع موقفكم لحساب مسافة الرحلة";
+"To drive with" = "لقيادة مع";
+"your vehicle must be 2000 or newer, and be a mid-size or full-size sedan that comfortably seats 4-8 passengers." = "يجب أن تكون سيارتك 2000 أو أحدث ، وأن تكون سيارة سيدان متوسطة الحجم أو كاملة الحجم تتسع بشكل مريح لـ 4-8 ركاب.";
+
+// first time api...
+"Those credentials don't look right. Please try again" = "وثائق التفويض لا تبدو الصحيح. حاول مرة اخرى";
+"Please enter registered mobile number" = "الرجاء إدخال رقم الجوال المسجل";
+"Mobile Number Exist" = "رقم الجوال موجود";
+
+"By continuing, I confirm that i have read and agree to the Terms & Conditions and Privacy Policy." = "من خلال المتابعة ، أؤكد أنني قد قرأت وأوافق على الشروط والأحكام وسياسة الخصوصية.";
+
+"Terms & Conditions" = "الشروط والأحكام";
+"Privacy Policy" = "سياسة الخصوصية";
+
+"Type a message..." = "اكتب رسالة ...";
+"No messages, yet." = "لا توجد رسائل ، حتى الآن.";
+"Rider" = "راكب";
+"Do you want to access direction?" = "هل تريد الوصول إلى الاتجاه؟";
+"Please install Google maps app , then only you get the direction for this item." = "الرجاء تثبيت تطبيق خرائط Google ، عندها فقط تحصل على اتجاه هذا البند.";
+"OK" = "حسنا";
+"Cancel" = "إلغاء";
+"Invalid data" = "بيانات غير صالحة";
+
+
+"Country" = "بلد";
+"Currency" = "دقة";
+"BSB" = "BSB";
+"Account Number" = "رقم حساب";
+"Account Holder Name" = "اسم صاحب الحساب";
+"Address" = "العنوان";
+"Address1" = "العنوان 1";
+"Address2" = "العنوان 2";
+"State / Province" = "الدولة / المقاطعة";
+"Transit Number" = "رقم العبور";
+"Institution Number" = "عدد مؤسسة";
+"Australia" = "أستراليا";
+"Canada" = "كندا";
+"New Zealand" = "نيوزيلندا";
+"United States" = "الولايات المتحدة الامريكانية";
+"Singapore" = "سنغافورة";
+"United Kingdom" = "المملكة المتحدة";
+"Hong Kong" = "هونج كونج";
+"Japan" = "اليابان";
+"Rounting Number" = "عدد رونتينغ";
+"SSN Last 4 Digits" = "SSN آخر 4 أرقام";
+"Bank Code" = "رمز بنكي";
+"Branch Code" = "رمز الفرع";
+"Sort Code" = "الكود البنكى";
+"Clearing Code" = "مسح الكود";
+"Bank Name" = "اسم البنك";
+"Branch Name" = "اسم الفرع";
+"Account Owner Name" = "الحساب اسم المالك";
+"Gender" = "جنس";
+"Male" = "الذكر";
+"Female" = "إناثا";
+"KanaAddress1" = "KanaAddress1";
+"KanaAddress2" = "KanaAddress2";
+"KanaCity" = "KanaCity";
+"KanaState / Province" = "KanaState / مقاطعة";
+"KanaPostal Code" = "مدونة KanaPostal";
+"IBAN Number" = "عدد IBAN";
+"Please Enter the" = "الرجاء إدخال";
+"Please update a legal document." = ".الرجاء تحديث وثيقة قانونية";
+"Server issue, Please try again." = "قضية خادم، يرجى المحاولة مرة أخرى.";
+"Stripe Details" = "تفاصيل الشريط";
+"Take Photo" = "تصوير";
+"Choose Photo" = "اختيار صور";
+
+"Add Payout" = "إضافة دفع تعويضات";
+"Payouts" = "دفعات";
+"Done" = "فعله";
+"Setup your UBER payout method" = "قم بإعداد طريقة دفع UBER الخاصة بك";
+"Please enter valid mail id" = "الرجاء إدخال معرف بريد صالح";
+"Delete" = "حذف";
+"Make Default" = "جعل الافتراضي";
+"Submit" = "إرسال";
+"Add" = "أضف";
+"Default" = "افتراضي";
+
+"Allow Camera" = " السماح للكاميرا";
+"Alert" = "تنبيه";
+"Camera access required for capturing photos!" = "الوصول إلى الكاميرا المطلوبة لالتقاط الصور!";
+"Email ID" = "عنوان الايميل";
+"Check Status" = "تحقق من حالة";
+"CONFIRM YOU'VE ARRIVED" = "تأكد من أنك وصلت";
+"Rate Your Ride" = "معدل رحلتك";
+"Pending Trips" = "في انتظار الرحلات";
+"Completed Trips" = "رحلات مكتملة";
+"TOTAL TRIPS AMOUNT" = "إجمالي عدد الرحلات";
+"You have no rating to display" = "ليس لديك تقييم للعرض";
+"No vehicle assigned" = "لم يتم تعيين مركبة";
+"TRIPS" = "رحلات";
+"SWIPE TO " = "اسحب إلى";
+"Bank Details" = "تفاصيل البنك";
+"Bank Location" = "مكان البنك";
+"BIC/SWIFT Code" = "رمز BIC / SWIFT";
+"Password Mismatch" = "";
+"required" = "";
+
+
+"Mobile Verification" =  "التحقق من الجوال";
+"Please enter your mobile number" =  "الرجاء إدخال رقم هاتفك المحمول";
+"LOGIN" =  "تسجيل الدخول";
+"Enter OTP" =  "أدخل OTP";
+"We have sent you access code via SMS for mobile number verification" = "لقد أرسلنا لك رمز الوصول عبر الرسائل القصيرة للتحقق من رقم الجوال";
+"Din't Receive the OTP?" = "ألا تستلم OTP؟";
+"Resend OTP" =  "إعادة إرسال OTP";
+"You can send OTP again in" = "يمكنك إرسال OTP مرة أخرى في";
+"Forgot Password?" = "هل نسيت كلمة المرور؟";
+"Your OTP is" = "مكتب المدعي العام الخاص بك هو";

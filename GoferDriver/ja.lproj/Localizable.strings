@@ -1,0 +1,333 @@
+/*
+ Localizable.strings
+ GoferDriver
+ 
+ Created by Trioangle on 17/07/18.
+ Copyright © 2018 Vignesh Palanivel. All rights reserved.
+ */
+"HOME" = "ホーム";
+"EARNINGS" = "稼ぎ";
+"RATINGS" = "評価";
+"ACCOUNT" = "アカウント";
+"Trips & Payments" = "トリップ ＆ 支払い";
+"Sunday" =  "日曜日";
+"Monday" = "月曜";
+"Tuesday" = "火曜日";
+"Wednesday" = "水曜日";
+"Thursday" = "木曜日";
+"Friday" = "金曜日";
+"Saturday" = "土曜日";
+"Password" = "パスワード";
+
+"Your OTP Code doesn't match" = "あなたのOTPコードが一致しません";
+"Resend Code" = "コードを再送信";
+"Cancelling Request..." = "リクエストをキャンセルしています...";
+"Already Accepted" = "既に 受け入れ済み";
+"Already accepted by someone" = "既に 受け入れ済み によって 誰か";
+"%@ MINUTES" = "%@ 分";
+"%@ MINUTE" = "%@ 分";
+
+"Driver's License - (Back/Reverse)" = "運転免許証 - (戻る/逆)";
+"Driver's License - (Front)" = "運転免許証 - (前面)";
+"Motor Insurance Certificate" = "モーター 保険 証明書";
+"Certificate of Registration" = "登録証明書";
+"Contract Carriage Permit" = "契約する キャリッジ 許可";
+
+"Document Section" = "文書セクション";
+"THIS WEEK" = "今週";
+"Offline" = "オフライン";
+"Online" = "オンライン";
+"Documents" = "書類";
+"Payout" = "支払い";
+"Sign Out" = "サインアウト";
+"First Name" = "ファーストネーム";
+"Last Name" = "苗字";
+"Email" = "Eメール";
+"Phone Number" = "電話番号";
+"Address Line 1" = "住所 ライン 1";
+"Address Line 2" = "住所 ライン 2";
+"City" = "シティ";
+"Postal Code" = "郵便番号";
+"State" = "状態";
+"Currency" = "通貨";
+"Personal Information" = "個人情報";
+"Address" = "住所";
+"Trip" = "トリップ";
+
+"Rider No show" = "ライダーノーショー";
+"Rider requested cancel" = "ライダーがキャンセルを要求しました";
+"Wrong address shown" = "間違ったアドレス 示されている";
+"Involved in an accident" = "関与した に あ 事故";
+"Do not charge Rider" = "しない 電荷 ライダー";
+"You have no today trips" = "君は 持ってる いいえ 今日 旅行";
+"You have no past trips" = "君は 持ってる いいえ 過去 旅行";
+"Add Payout Method" = "支払い方法を追加";
+"Most recent payout: %@ %@" = "最も 最近の支払い: %@ %@";
+"Last trip: %@ %@" = "最終 トリップ: %@ %@";
+"Most recent payout: %@ 0" = "最も 最近の支払い: %@ 0";
+"Last trip: %@ 0" = "最終 トリップ: %@ 0";
+"Trip ID:" = "旅行ID:";
+"Total Payout" = "総支払い";
+"CASH COLLECTED" = "収集した現金";
+"Cash collected" = "収集した現金";
+"MINS" = "議事録";
+"To add a new payout. Create a email for your" = "新しい支払いを追加します。作成する ある Eメール にとって きみの";
+"account." = "アカウント.";
+"Scheduled" = "予定";
+"Rating" = "評価";
+"Cancelled" = "キャンセル";
+"Completed" = "完了しました";
+"Payment" = "支払い";
+"BEGIN TRIP" = "ベギン トリップ";
+"END TRIP" = "終わり トリップ";
+"Begin trip" = "ベギン トリップ";
+"End trip" = "終わり トリップ";
+"Pending" = "保留中";
+"Upload failed. Please try again" = "アップロードに失敗しました. もう一度やり直してください";
+
+//payment detail page:
+"Base Fare" = "基本運賃";
+"Distance Fare" = "距離運賃";
+"Time Fare" = "時間運賃";
+"Total Trip Fare" = "合計トリップ運賃";
+"Wallet Amount" = "ウォレット金額";
+"Admin's Amount" = "管理者の金額";
+"Collectable Cash" = "収集可能現金";
+"Total Payout" = "総支払い";
+"Driver Payout" = "ドライバーの支払い";
+"Owe Amount" = "オーウェ量";
+
+//button Tile payment page,dricer home
+"WAITING FOR PAYMENT" = "入金待ち";
+"PAID" = "有料";
+"WAITING FOR RIDER CONFIRMATION" = "ライダー確認待ち";
+"Payment Accept" = "支払い承諾";
+"Active" = "アクティブ";
+
+//alertView
+"Ok" = "オーケー";
+"Success" = "成功";
+"Message" = "メッセージ";
+"Message!!!" = "メッセージ!!!";
+"Device has no camera" = "デバイスにカメラがありません";
+"Error" = "エラー";
+"Warning" = "警告";
+"Please give permission to access photo" = "写真へのアクセスを許可してください";
+"Trip cancelled by rider" = "ライダーによって旅行がキャンセルされました";
+"Rider successfully paid" = "ライダーは正常に支払いました";
+"Please give rating" = "評価してください";
+"Payment Completed successfully" = "支払いは正常に完了しました";
+"Please enable Push Notification in settings for continue to login" = "ログインを続けるための設定でプッシュ通知を有効にしてください";
+"camera use" = "カメラ つかいます";
+"photos use" = "写真 つかいます";
+"track your position to calculate the trip distance" = "移動距離を計算するためにあなたの位置を追跡する";
+"To drive with" = "で運転する";
+"your vehicle must be 2000 or newer, and be a mid-size or full-size sedan that comfortably seats 4-8 passengers." = "あなたの車両2000以上でなければなりません, 快適に4-8人の乗客を席に入れることができる中型または大型のセダンであること.";
+
+// first time api...
+"Those credentials don't look right. Please try again" = "これらの資格情報は正しくありません。もう一度やり直してください";
+"Please enter registered mobile number" = "登録済みの携帯電話番号を入力してください";
+"Mobile Number Exist" = "携帯電話番号が存在します";
+
+"By continuing, I confirm that i have read and agree to the Terms & Conditions and Privacy Policy." = "続行することにより、私は利用規約およびプライバシーポリシーを読み、同意したことを確認します.";
+
+"Terms & Conditions" = "規約と条件";
+"Privacy Policy" = "個人情報保護方針";
+
+"Type a message..." = "メッセージを入力...";
+"No messages, yet." = "メッセージなし, まだ.";
+"Rider" = "ライダー";
+"Do you want to access direction?" = "方向にアクセスしますか?";
+"Please install Google maps app , then only you get the direction for this item." = "Googleマップアプリをインストールしてください、そうすればあなただけがこのアイテムの方向を知ることができます.";
+"OK" = "オーケー";
+"Cancel" = "キャンセル";
+"CANCEL" = "キャンセル";
+"Invalid data" = "無効なデータ";
+
+
+"Country" = "国";
+"Currency" = "通貨";
+"BSB" = "BSB";
+"Account Number" = "口座番号";
+"Account Holder Name" = "口座名義";
+"Address" = "住所";
+"Address1" = "住所1";
+"Address2" = "住所2";
+"State / Province" = "状態 / 州";
+"Transit Number" = "トランジット番号";
+"Institution Number" = "機関番号";
+"Australia" = "オーストラリア";
+"Canada" = "カナダ";
+"New Zealand" = "ニュージーランド";
+"United States" = "アメリカ";
+"Singapore" = "シンガポール";
+"United Kingdom" = "イギリス";
+"Hong Kong" = "香港";
+"Japan" = "日本";
+"Rounting Number" = "ルーティング番号";
+"SSN Last 4 Digits" = "SSNの最後の4桁";
+"Bank Code" = "金融機関コード";
+"Branch Code" = "支店コード";
+"Sort Code" = "ソートコード";
+"Clearing Code" = "清算コード";
+"Bank Name" = "銀行名";
+"Branch Name" = "支店名";
+"Account Owner Name" = "アカウント所有者名";
+"Gender" = "性別";
+"Male" = "男性";
+"Female" = "女性";
+"KanaAddress1" = "かなアドレス1";
+"KanaAddress2" = "かなアドレス2";
+"KanaCity" = "カナシティ";
+"KanaState / Province" = "かな状態 / 州";
+"KanaPostal Code" = "かな郵便コード";
+"IBAN Number" = "IBAN番号";
+"Please Enter the" = "を入力してください";
+"Please update a legal document." = "法的文書を更新してください.";
+"Server issue, Please try again." = "サーバーの問題です。もう一度やり直してください.";
+"Stripe Details" = "ストライプ詳細";
+"Take Photo" = "写真を撮る";
+"Take a photo of your" = "あなたの写真を撮ります";
+"Choose Photo" = "写真を選んでください";
+"TAKE PHOTO" = "写真を撮る";
+"Add Payout" = "支払いを追加";
+"Payouts" = "支払い";
+"Done" = "完了";
+"Setup your UBER payout method" = "UBERの支払い方法を設定する";
+"Please enter valid mail id" = "有効なメールIDを入力してください";
+"Delete" = "削除する";
+"Make Default" = "デフォルトにする";
+"Submit" = "提出する";
+"SUBMIT" = "提出する";
+"Add" = "追加する";
+"Default" = "デフォルト";
+
+"Allow Camera" = "カメラを許可";
+"Alert" = "アラート";
+"Camera access required for capturing photos!" = "写真を撮影するにはカメラへのアクセスが必要です.";
+"Email ID" = "電子メールID";
+
+
+//MARK: Story Board Changes
+
+"SIGN IN" = "サインイン";
+"REGISTER" = "登録";
+"LOOKING FOR THE RIDER APP?" = "ライダーアプリをお探しですか?";
+"CLOSE" = "閉じる";
+"LOG IN" = "ログイン";
+"Forgot Password?" = "パスワードをお忘れですか?";
+"PASSWORD" = "パスワード";
+"Password" = "パスワード";
+"RESET PASSWORD" = "パスワードを再設定する";
+"CONFIRM PASSWORD" = "パスワードを認証する";
+"Select a Country" = "国を選択";
+"Search" = "サーチ";
+"No internet connection." = "インターネットに接続できません。";
+"Enter the 4-digit code sent to you at" = "に送信された4桁のコードを入力してください";
+"SIGN UP" = "サインアップ";
+"name@example.com" = "名@例.コム";
+"VERIFY" = "検証";
+"Please upload your documents" = "あなたの文書をアップロードしてください";
+"Login" = "ログイン";
+"Select a photo" = "写真を選択";
+"CHOOSE FROM LIBRARY" = "ライブラリから選択";
+"Please make sure we can easily read all the details." = "私達が容易にすべての細部を読むことができることを確かめなさい";
+
+// Client changes text
+"TAP TO ADD" = "追加をタップ";
+"CHANGE" = "変化する";
+"Offline" = "オフライン";
+"Check Status" = "ステータスの確認";
+"TOTAL PAYOUT" = "総支払い額";
+"You have not driven this week" = "今週は運転していません";
+"TRIP HISTORY" = "履歴";
+"     TODAY'S TRIPS" = "本日の実車";
+"     PAST TRIPS" = "過去の実車";
+"You have no past trips." = "過去の旅行はありません.";
+"WEEKLY STATEMENT" = "週ごとの支払い金額";
+"Fare" = "基本料金";
+"Fee" = "費用";
+"Tax Return" = "納税申告書";
+"Total Earnings" = "総収益";
+"Rider fares earned and kept" = "運賃料は獲得され維持されます。";
+"Bank Deposit" = "残高";
+"TIME ONLINE" = "オンライン時間";
+"COMPLETED TRIPS" = "完了実車";
+
+"DAILY EARNINGS" = "毎日の収入";
+"TRIP EARNINGS" = "トリップ収益";
+"PAY STATEMENT" = "支払明細書";
+"Add Payout" = "ペイパル支払いの追加";
+"PayPal Email id" = "PayPalのメールID";
+"SAVE" = "保存";
+"Save" = "保存";
+"RIDER FEEDBACK" = "お客様のお声";
+"YOUR CURRENT RATING" = "全ての距離";
+"LIFETIME TRIPS" = "ライフタイムトリップ";
+"RATED TRIPS" = "評価された旅";
+"5 STARS" = "5 星";
+"Rider Feedback" = "お客様のお声";
+"Check out feedback from riders and learn how to improve" = "ライダーからのフィードバックをチェックするそして改善する方法を学びなさい";
+"Accepting pickup..." = "呼び出しを受け付けています...";
+"En Route" = "実車中";
+"NAVIGATE" = "ナビ";
+"CASH TRIP" = "送迎料金";
+"JOHN · Pickup" = "お客様乗車";
+"Network disconnected" = "ネットワークが切断されました";
+"CONFIRM YOU'VE ARRIVED" = "到着したことを確認します";
+"How would you like to reset your password?" = "どのようにパスワードをリセットしますか";
+"MOBILE" = "モバイル";
+"Enter your mobile number" = "携帯番号を入力してください";
+"Select Your Vehicle" = "あなたの車を選択してください";
+"Choose Vehicle Type" = "車種を選択";
+"Enter your vehicle name" = "あなたの車の名前を入力してください";
+"Enter your vehicle number" = "車両番号を入力してください";
+"CONTINUE" = "続ける";
+"Cancel Your Ride" = "ライドをキャンセル";
+"Cancel reason" = "キャンセルに必要な理由は必須です";
+"Write your comment..." = "あなたのコメントを書いてください...";
+"CANCEL TRIP" = "旅行をキャンセル";
+"Payment Details" = "支払詳細";
+"Rate your rider" = "ライダーを評価する";
+"Write your comment..." = "あなたのコメントを書いてください...";
+"PICK UP" = "拾う";
+"CONTACT" = "接触";
+"Contact" = "接触";
+"DROP OFF" = "校舎";
+"EDIT" = "編集";
+"VIEW" = "見る";
+"CALLS ONLY" = "通話のみ";
+"CALL" = "コール";
+"MESSAGE" = "メッセージ";
+"TRIP DETAIL" = "トリップの詳細";
+"  TRIP EARNINGS" = "トリップ獲得";
+"date @ time" = "日付時刻";
+"Penality Amount" = "ペナルティ額";
+"DURATION" = "期間";
+"DISTANCE" = "距離";
+"VEHICLE INFORMATION" = "車両情報";
+"Help" = "助けて";
+"Legal Document " = "法文書";
+"Check Status" = "ステータス確認";
+"CONFIRM YOU'VE ARRIVED" = "到着したことを確認します";
+"Rate Your Ride" = "あなたのライドを評価";
+"Pending Trips" = "保留中の旅行";
+"Completed Trips" = "完了した旅行";
+"TOTAL TRIPS AMOUNT" = "合計トリップ金額";
+"You have no rating to display" = "表示する評価がありません";
+"No vehicle assigned" = "車両が割り当てられていない";
+"TRIPS" = "トリップ";
+"SWIPE TO " = "スワイプ先";
+"Bank Details" = "銀行の詳細";
+"Bank Location" = "銀行の所在地";
+"BIC/SWIFT Code" = "BIC / SWIFTコード";
+
+"Mobile Verification" = "モバイル検証";
+"Please enter your mobile number" = "携帯電話番号を入力してください";
+"LOGIN" = "ログインする";
+"Enter OTP" = "Enter OTP";
+"We have sent you access code via SMS for mobile number verification" = "携帯電話番号の確認のために、SMS経由でアクセスコードを送信しました";
+"Din't Receive the OTP?" = "OTPを受信しませんか？";
+"Resend OTP" = "OTPの再送信";
+"You can send OTP again in" = "OTPを再度送信できます";
+"Your OTP is" = "あなたのOTPは";

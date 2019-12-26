@@ -1,0 +1,247 @@
+/*
+ Localizable.strings
+ GoferDriver
+ 
+ Created by Trioangle on 17/07/18.
+ Copyright © 2018 Vignesh Palanivel. All rights reserved.
+ */
+"HOME" = "CASA";
+"EARNINGS" = "GANANCIAS";
+"RATINGS" = "Clasificación";
+"ACCOUNT" = "CUENTA";
+"Trips & Payments" = "Viajes y Pagos";
+"Sunday" =  "Domingo";
+"Monday" = "Lunes";
+"Tuesday" = "Martes";
+"Wednesday" = "Miércoles";
+"Thursday" = "Jueves";
+"Friday" = "Viernes";
+"Saturday" = "Sábado";
+"Password" = "Contraseña";
+"No internet connection." = "Sin conexión a Internet.";
+
+"Your OTP Code doesn't match" = "Su Código OTP no coincide";
+"Resend Code" = "Reenviar codigo";
+"Cancelling Request..." = "Cancelación de Solicitud ...";
+"Already Accepted" = "Ya aceptada";
+"Already accepted by someone" = "Ya aceptada por alguien";
+"%@ MINUTES" = "MINUTOS";
+"%@ MINUTE" = "MINUTO";
+
+"Driver's License - (Back/Reverse)" = "Licencia de Conducir - (Volver / retroceso)";
+"Driver's License - (Front)" = "Licencia de Conducir - (frontales)";
+"Motor Insurance Certificate" = "Seguro Certificado del motor";
+"Certificate of Registration" = "Certificado de registro";
+"Contract Carriage Permit" = "Permiso de transporte Contrato";
+
+"Document Section" = "Sección de documentos";
+"THIS WEEK" = "ESTA SEMANA";
+"Offline" = "Desconectado";
+"Online" = "En línea";
+"Documents" = "Documentos";
+"Payout" = "Pagar";
+"Sign Out" = "Desconectar";
+"First Name" = "Nombre de pila";
+"Last Name" = "Apellido";
+"Email" = "Email";
+"Phone Number" = "Número de teléfono";
+"Address Line 1" = "Dirección Línea 1";
+"Address Line 2" = "Línea 2";
+"City" = "Ciudad";
+"Postal Code" = "Código postal";
+"State" = "Estado";
+"Currency" = "Moneda";
+"Personal Information" = "Informacion personal";
+"Address" = "Dirección";
+"Trip" = "Viaje";
+
+
+"Rider No show" = "Si no se presenta jinete";
+"Rider requested cancel" = "Rider solicitó cancelar";
+"Wrong address shown" = "Dirección incorrecta se muestra";
+"Involved in an accident" = "Involucrado en un accidente";
+"Do not charge Rider" = "No cargue Rider";
+"You have no today trips" = "No tiene viajes de hoy en día";
+"You have no past trips" = "No tiene viajes anteriores";
+"Add Payout Method" = "Agregar método de pagos";
+"Most recent payout: %@ %@" = "Desembolso más reciente:";
+"Last trip: %@ %@" = "Último viaje: ";
+"Most recent payout: %@ 0" = "Desembolso más reciente:";
+"Last trip: %@ 0" = "Último viaje: ";
+"Trip ID:" = "Id viaje:";
+"Total Payout" = "Pago total";
+"CASH COLLECTED" = "Efectivo percibidos";
+"Cash collected" = "Efectivo percibidos";
+"Scheduled" = "programado";
+"Rating" = "Clasificación";
+"Cancelled" = "Cancelado";
+"Completed" = "Terminado";
+"Payment" = "Pago";
+"BEGIN TRIP" = "Comenzar de viaje";
+"END TRIP" = "Fin de viaje";
+"Begin trip" =  "Comenzar de viaje";
+"End trip" = "Fin de viaje";
+"Pending" = "Pendiente";
+
+//payment detail page:
+"Base Fare" = "Tarifa base";
+"Distance Fare" = "Distancia tarifa";
+"Time Fare" = "Fare Tiempo";
+"Wallet Amount" = "Monto de la cartera";
+"Total Trip Fare" = "Tarifa total de viaje";
+"Admin's Amount" = "Cantidad de Admin";
+"Collectable Cash" = "Coleccionable efectivo";
+"Total Payout" = "Pago total";
+"Driver Payout" = "Pago controlador";
+"Owe Amount" = "No debáis Cantidad";
+
+//button Tile payment page,dricer home
+"WAITING FOR PAYMENT" = "A LA ESPERA DEL PAGO";
+"PAID" = "PAGADO";
+"WAITING FOR RIDER CONFIRMATION" = "A la espera de la confirmación piloto";
+"Payment Accept" = "Pago Aceptar";
+"Active" = "Activo";
+"MINS" = "minutos";
+"Upload failed. Please try again" = "Subida fallida. Inténtalo de nuevo";
+"To add a new payout. Create a email for your" = "Para agregar un nuevo pago. Crea un email para tu";
+"account." = "cuenta.";
+"To drive with" = "Conducir con";
+"your vehicle must be 2000 or newer, and be a mid-size or full-size sedan that comfortably seats 4-8 passengers." = "su vehículo debe ser 2000 o más nuevo, y debe ser un sedán mediano o grande que pueda acomodar cómodamente a 4-8 pasajeros.";
+
+
+
+//alertView
+"Ok" = "De acuerdo";
+"Success" = "Éxito";
+"Message" = "Mensaje";
+"Message!!!" = "Mensaje!!!";
+"Success" = "Éxito";
+"Device has no camera" = "El dispositivo tiene cámara";
+"Error" = "Error";
+"Warning" = "Advertencia";
+"Trip cancelled by rider" = "Viaje cancelado por el piloto";
+"Rider successfully paid" = "Rider pagado con éxito";
+"Please give rating" = "Por favor calificación";
+"Payment Completed successfully" = "El pago realizado con éxito";
+"Device has no camera" = "Dispositivo no tiene cámara";
+"camera use" = "uso de la cámara";
+"photos use" = "fotos utilizan";
+"Please give permission to access photo" = "Por favor, dar permiso para acceder a la foto";
+"track your position to calculate the trip distance" = "seguimiento de su posición para calcular la distancia del viaje";
+"Please enable Push Notification in settings for continue to login" = "Por favor, activa notificaciones push en los ajustes para seguir login";
+
+// first time api...
+"Those credentials don't look right. Please try again" = "Esas credenciales no se ven bien. Inténtalo de nuevo";
+"Please enter registered mobile number" = "Por favor, introduzca el número de móvil registrado";
+"Mobile Number Exist" = "Número Móvil existe";
+
+
+
+"By continuing, I confirm that i have read and agree to the Terms & Conditions and Privacy Policy." = "Al continuar, confirmo que he leído y acepto los Términos y condiciones y la Política de privacidad.";
+"Terms & Conditions" = "Términos y condiciones";
+"Privacy Policy" = "Política de privacidad";
+
+
+
+"Type a message..." = "Escribe un mensaje ...";
+"No messages, yet." = "Aún no hay mensajes.";
+"Rider" = "Jinete";
+"Do you want to access direction?" = "Quieres acceder a la dirección?";
+"Please install Google maps app , then only you get the direction for this item." = "Instale la aplicación Google maps, luego solo obtendrá la dirección para este artículo.";
+"OK" = "ok";
+"Cancel" = "Cancelar";
+"Invalid data" = "Datos inválidos";
+
+"Country" = "País";
+"Currency" = "Moneda";
+"BSB" = "BSB";
+"Account Number" = "Número de cuenta";
+"Account Holder Name" = "Nombre del titular de la cuenta";
+"Address" = "Dirección ";
+"Address1" = "Dirección 1";
+"Address2" = "Dirección 2";
+"City" = "Ciudad";
+"State / Province" = "Provincia del estado";
+"Postal Code" = "Código postal";
+"Transit Number" = "Número de Tránsito";
+"Institution Number" = "Número Institución";
+"Australia" = "Australia";
+"Canada" = "Canadá";
+"New Zealand" = "Nueva Zelanda";
+"United States" = "Estados Unidos";
+"Singapore" = "Singapur";
+"United Kingdom" = "Reino Unido";
+"Hong Kong" = "Hong Kong";
+"Japan" = "Japón";
+"Rounting Number" = "Número rounting";
+"SSN Last 4 Digits" = "SSN últimos 4 dígitos";
+"Bank Code" = "Codigo bancario";
+"Branch Code" = "Código de sucursal";
+"Sort Code" = "Código de clasificacion";
+"Clearing Code" = "Código de compensación";
+"Branch Code" = "Código de sucursal";
+"Bank Name" = "Nombre del banco";
+"Branch Name" = "Nombre de la rama";
+"Account Owner Name" = "Nombre de cuenta del propietario";
+"Phone Number" = "Número de teléfono";
+"Gender" = "Género";
+"Male" = "Masculino";
+"Female" = "Hembra";
+"KanaAddress1" = "KanaAddress1";
+"KanaAddress2" = "KanaAddress2";
+"KanaCity" = "KanaCity";
+"KanaState / Province" = "KanaState / Provincia";
+"KanaPostal Code" = "Código KanaPostal";
+"IBAN Number" = "Número IBAN";
+"Please Enter the" = "Por favor introduce el";
+"Please update a legal document." = "Por favor, actualice un documento legal.";
+"Server issue, Please try again." = "Problema del servidor, por favor intente de nuevo.";
+"Stripe Details" = "raya Detalles";
+"Device has no camera" = "El dispositivo tiene cámara";
+"Error" = "Error";
+"OK" = "DE ACUERDO";
+"Server issue, Please try again." = "Problema del servidor, por favor intente de nuevo.";
+"Take Photo" = "Tomar foto";
+"Choose Photo" = "Escoge una foto";
+"Cancel" = "Cancelar";
+
+"Add Payout" = "Añadir pago";
+"Payouts" = "Pagos";
+"Done" = "Hecho";
+"Setup your UBER payout method" = "Configure su método de pago UBER";
+"Please enter valid mail id" = "Por favor ingrese una identificación de correo válida";
+"Delete" = "Eliminar";
+"Make Default"   = "Hacer predeterminado";
+"Submit" = "Enviar";
+"Add" = "Añadir";
+"Default" = "Predeterminado";
+"Rider" = "Jinete";
+
+"Allow Camera" = "Permitir cámara";
+"Alert" = "alerta";
+"Camera access required for capturing photos!" = "Se requiere acceso a la cámara para capturar fotos.";
+"Email ID" = "Identificación de correo";
+"Check Status" = "Comprobar estado";
+"CONFIRM YOU'VE ARRIVED" = "CONFIRMAR QUE HA LLEGADO";
+"Rate Your Ride" = "Califica tu viaje";
+"Pending Trips" = "Viajes pendientes";
+"Completed Trips" = "Viajes completados";
+"TOTAL TRIPS AMOUNT" = "CANTIDAD TOTAL DE VIAJES";
+"You have no rating to display" = "No tienes ninguna calificación para mostrar";
+"No vehicle assigned" = "Ningún vehículo asignado";
+"TRIPS" = "EXCURSIONES";
+"SWIPE TO " = "Pasar a";
+"Bank Details" = "Detalles del banco";
+"Bank Location" = "localización del Banco";
+"BIC/SWIFT Code" = "Código BIC / SWIFT";
+
+"Mobile Verification" = "Verificación móvil";
+"Please enter your mobile number" = "Por favor, introduzca su número de móvil";
+"LOGIN" = "INICIAR SESIÓN";
+"Enter OTP" = "Ingresar OTP";
+"We have sent you access code via SMS for mobile number verification" = "Le enviamos un código de acceso por SMS para la verificación del número de teléfono móvil";
+"Din't Receive the OTP?" = "¿No recibe la OTP?";
+"Resend OTP" = "Reenviar OTP";
+"You can send OTP again in" = "Puede enviar OTP nuevamente en";
+"Forgot Password?" = "¿Se te olvidó tu contraseña?";
+"Your OTP is" = "Tu OTP es";

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Segoe-UI.ttf">
+            <string>SegoeUI</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="pqm-4f-aEU" userLabel="UserName" customClass="ARTextField" customModule="Dialler_Driver" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="339" height="100"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ro6-ca-P4m">
+                    <rect key="frame" x="0.0" y="45" width="339" height="20"/>
+                    <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="17"/>
+                    <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="pCX-oy-Cah">
+                    <rect key="frame" x="0.0" y="37.5" width="301" height="35"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="35" id="SFY-Rg-Ux1"/>
+                    </constraints>
+                    <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="20"/>
+                    <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                </textField>
+                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w1I-AB-CTQ">
+                    <rect key="frame" x="304" y="37.5" width="35" height="35"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="w1I-AB-CTQ" secondAttribute="height" multiplier="1:1" id="Nmp-M3-DKH"/>
+                    </constraints>
+                    <connections>
+                        <action selector="showHidePassAct:" destination="pqm-4f-aEU" eventType="touchUpInside" id="9Qw-4c-kLp"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wm6-ug-HbK">
+                    <rect key="frame" x="0.0" y="77.5" width="339" height="1"/>
+                    <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="j2x-Zz-B6s"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="ro6-ca-P4m" secondAttribute="trailing" id="20x-xT-FQW"/>
+                <constraint firstItem="w1I-AB-CTQ" firstAttribute="leading" secondItem="pCX-oy-Cah" secondAttribute="trailing" constant="3" id="2s1-Bv-63H"/>
+                <constraint firstItem="w1I-AB-CTQ" firstAttribute="bottom" secondItem="pCX-oy-Cah" secondAttribute="bottom" id="7MA-6i-QsW"/>
+                <constraint firstAttribute="trailing" secondItem="Wm6-ug-HbK" secondAttribute="trailing" id="8qG-Jn-3dK"/>
+                <constraint firstItem="ro6-ca-P4m" firstAttribute="leading" secondItem="pqm-4f-aEU" secondAttribute="leading" id="CRQ-7w-dtf"/>
+                <constraint firstItem="pCX-oy-Cah" firstAttribute="centerY" secondItem="ro6-ca-P4m" secondAttribute="centerY" id="Dge-8v-fnl"/>
+                <constraint firstItem="pCX-oy-Cah" firstAttribute="centerY" secondItem="pqm-4f-aEU" secondAttribute="centerY" constant="5" id="KEu-oa-ZcP"/>
+                <constraint firstItem="pCX-oy-Cah" firstAttribute="leading" secondItem="pqm-4f-aEU" secondAttribute="leading" id="NyE-Ew-p0P"/>
+                <constraint firstItem="Wm6-ug-HbK" firstAttribute="leading" secondItem="pqm-4f-aEU" secondAttribute="leading" id="QQB-4O-h8Z"/>
+                <constraint firstItem="Wm6-ug-HbK" firstAttribute="top" secondItem="pCX-oy-Cah" secondAttribute="bottom" constant="5" id="anE-Hi-nwY"/>
+                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Wm6-ug-HbK" secondAttribute="bottom" constant="3" id="gAb-Ul-ITy"/>
+                <constraint firstItem="w1I-AB-CTQ" firstAttribute="top" secondItem="pCX-oy-Cah" secondAttribute="top" id="h1C-ef-xoy"/>
+                <constraint firstItem="pCX-oy-Cah" firstAttribute="top" relation="greaterThanOrEqual" secondItem="h2s-sn-P5g" secondAttribute="top" constant="3" id="h1O-cc-vJI"/>
+                <constraint firstAttribute="trailing" secondItem="w1I-AB-CTQ" secondAttribute="trailing" id="vXi-CQ-wwq"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="h2s-sn-P5g"/>
+            <connections>
+                <outlet property="bar" destination="Wm6-ug-HbK" id="jj8-n8-yPN"/>
+                <outlet property="barHeight" destination="j2x-Zz-B6s" id="nTx-oT-ydO"/>
+                <outlet property="icon" destination="w1I-AB-CTQ" id="vQi-ni-T37"/>
+                <outlet property="textField" destination="pCX-oy-Cah" id="uNC-PW-FRg"/>
+                <outlet property="textFieldHeight" destination="SFY-Rg-Ux1" id="J0f-B2-xI0"/>
+                <outlet property="title" destination="ro6-ca-P4m" id="8Cw-Yb-4lt"/>
+            </connections>
+            <point key="canvasLocation" x="52.5" y="381"/>
+        </view>
+    </objects>
+</document>

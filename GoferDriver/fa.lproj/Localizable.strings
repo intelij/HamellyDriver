@@ -1,0 +1,252 @@
+/* 
+  Localizable.strings
+  GoferDriver
+
+  Created by Trioangle on 17/07/18.
+  Copyright © 2018 Vignesh Palanivel. All rights reserved.
+*/
+
+"HOME" = "صفحه اصلی";
+"EARNINGS" = "درآمد";
+"RATINGS" = "رتبه بندی";
+"ACCOUNT" = "اکونت";
+"Trips & Payments" = "سفرها و پرداخت ها";
+"Sunday" = "یکشنبه";
+"Monday" = "دوشنبه";
+"Tuesday" = "سه شنبه";
+"Wednesday" = "چهار شنبه";
+"Thursday" = "پنجشنبه";
+"Friday" = "جمعه";
+"Saturday" = "شنبه";
+"Password" = "کلمه عبور";
+"No internet connection." = "بدون اتصال به اینترنت";
+"Your OTP Code doesn't match" = "کد شما مطابقت نداردOTP";
+"Resend Code" = "دوباره کود را روان کنید";
+"Cancelling Request..." = "لغو درخواست ...";
+"Already Accepted" = "قبلا قبول شده";
+"Already accepted by someone" = "قبلا توسط کسی قبول شده است";
+"%@ MINUTES" = "دقایق";
+"%@ MINUTE" = "دقیقه";
+
+
+"Driver's License - (Back/Reverse)" = "گواهینامه رانندگی - (برگشت / معکوس)";
+"Driver's License - (Front)" = "گواهینامه رانندگی - (جلو)";
+"Motor Insurance Certificate" = "گواهی بیمه موتور";
+"Certificate of Registration" = "گواهی ثبت نام";
+"Contract Carriage Permit" = "قرارداد حمل اجازه";
+"Document Section" = "بخش سند";
+"THIS WEEK" = "این هفته";
+"Offline" = "آفلاین";
+"Online" = "آنلاین";
+"Documents" = "اسناد ها";
+"Payout" = "کاملاَ پرداخت نمودن";
+"Sign Out" = "خارج شدن";
+"First Name" = "اسم اول";
+"Last Name" = "اسم اول";
+"Email" = "ایمیل";
+"Phone Number" = "نمبر تیلفون";
+"Address Line 1" = "نمبر تیلفون";
+"Address Line 2" = "آدرس خط دوم";
+"City" = "شهر";
+"Postal Code" = "پوستل کود";
+"State" = "ایالت";
+"Currency" = "واحد پول";
+"Personal Information" = "اطلاعات شخصی";
+"Address" = "نشانی";
+"Trip" = "سفر";
+
+
+"Rider No show" = "نبود نشان راننده";
+"Rider requested cancel" = "لغو تقاضای راننده";
+"Wrong address shown" = "نمایش آدرس اشتباره";
+"Involved in an accident" = "گیرافتیدن در یک حادثه";
+"Do not charge Rider" = "راننده را چارج نکن";
+"You have no today trips" = "شما امروز کدام سفری ندارید";
+"You have no past trips" = "شما هیچ سفر قبلی ندارید";
+"Add Payout Method" = "افزودن روش پرداخت";
+"Most recent payout: %@ %@" = "آخرین پرداختها";
+"Last trip: %@ %@" = "سفر آخر";
+"Most recent payout: %@ 0" = "آخرین پرداخت";
+"Last trip: %@ 0" = "سفر آخر";
+"Trip ID:" = "شناسه سفر:";
+"Total Payout" = "پرداخت مجموعی";
+"CASH COLLECTED" = "نقدی جمع آوری شده";
+"Cash collected" = "نقدی جمع آوری شده";
+"Rating" = "امتیاز";
+"Cancelled" = "لغو شد";
+"Completed" = "تکمیل شد";
+"Payment" = "پرداخت";
+"BEGIN TRIP" = "شروع سفر";
+"END TRIP" = "ختم سفر";
+"Scheduled" = "برنامه ریزی شده";
+"Begin trip" =  "اغاز سفر";
+"End trip" = "ختم سفر";
+"Pending" = "در انتظار";
+"Upload failed. Please try again" = "آپلود نشد لطفا دوباره تلاش کنید";
+"MINS" = "دقیقه";
+"To add a new payout. Create a email for your" =  "برای اضافه کردن پرداخت جدید یک ایمیل برای خود ایجاد کنید";
+"account." = "حساب.";
+"To drive with" = "برای رانندگی با";
+"your vehicle must be 2000 or newer, and be a mid-size or full-size sedan that comfortably seats 4-8 passengers." = "وسیله نقلیه شما باید 2000 و یا جدیدتر باشد و یک سدان متوسط ​​یا سایز کامل باشد که به راحتی 4-8 مسافر صندلی می کند.";
+
+
+
+//payment detail page:
+
+"Base Fare" = "کرایه اصلی";
+"Distance Fare" = "هزینه فاصله";
+"Time Fare" = "هزینه وقت";
+"Total Trip Fare" = "کل هزینه سفر";
+"Wallet Amount" = "مقدار کیف پول";
+"Admin's Amount" = "کرایه مجموعی سفر";
+"Collectable Cash" = "جمع آوری پول نقد";
+"Total Payout" = "مجموع پرداخت";
+"Driver Payout" = "پرداخت پول درایور";
+"Owe Amount" = "مقدار دارایی";
+
+//button Tile payment page,dricer home
+"WAITING FOR PAYMENT" = "منتظر برای پرداخت";
+"PAID" = "پرداخته شد";
+"WAITING FOR RIDER CONFIRMATION" = "منتظر برای تائیدی درایور";
+"Payment Accept" = "پذیرش پرداخت";
+"Active" = "فعال";
+
+
+//alertView
+"Ok" = "درست است";
+"Success" = "موفقیت";
+"Message" = "پیام";
+"Message!!!" = "پیام";
+"Device has no camera" = "دریوار کدام کمره ندارد";
+"Error" = "اشتباه";
+"Warning" = "هشدار";
+"Please give permission to access photo" = "لطفا اجازه دسترسی به عکس را بدهید";
+"Trip cancelled by rider" = "سفر از طرف درایور لغو شد";
+"Rider successfully paid" = "راننده موفقانه پرداخت شد";
+"Please give rating" = "لطفا ارزیابی کنید";
+"Payment Completed successfully" = "پرداخت موفقانه تکمیل شد";
+"Please enable Push Notification in settings for continue to login" = "لطفا تنظیمات فشار را در تنظیمات فعال کنید تا برای ورود به سیستم ادامه یابد";
+"Device has no camera" = "دستگاه دارای کمره ندارد";
+"camera use" = "استفاده کمره";
+"photos use" = "استفاده عکس";
+"track your position to calculate the trip distance" =  "برای حساب کردن فاصله سفر لطفا موقعیت تانرا دنبال کنید";
+"Success" = "موفقیت";
+
+
+
+
+// first time api...
+
+"Those credentials don't look right. Please try again" = "این اعتبارات درست نیست. لطفا دوباره تلاش کنید";
+"Please enter registered mobile number" = "لطفا شماره تلفن همراه ثبت نام کنید";
+"Mobile Number Exist" = "شماره تلفن موجود است";
+
+
+"By continuing, I confirm that i have read and agree to the Terms & Conditions and Privacy Policy." = "با ادامه، تأیید میکنم که شرایط و ضوابط و خط مشی رازداری را خوانده ام و موافقم.";
+"Terms & Conditions" = "شرایط و ضوابط";
+"Privacy Policy" = "خط مشی";
+
+
+"Type a message..." = "یک پیام را تایپ کنید ...";
+"No messages, yet." = "هیچ پیغامی وجود ندارد";
+"Rider" = "رایدر";
+"Do you want to access direction?" = "آیا میخواهید به مسیر دسترسی داشته باشید؟";
+"Please install Google maps app , then only you get the direction for this item." = "لطفا برنامه Google Maps را نصب کنید، سپس فقط جهت این مورد را دریافت می کنید.";
+"OK" = "خوب";
+"Cancel" = "لغو";
+"Invalid data" = "داده های نامعتبر";
+
+"Country" = "کشور";
+"Currency" = "واحد پول";
+"BSB" = "BSB";
+"Account Number" = "شماره حساب";
+"Account Holder Name" = "نام صاحب حساب";
+"Address" = "آدرس ";
+"Address1" = "آدرس 1";
+"Address2" = "آدرس 2";
+"City" = "شهر";
+"State / Province" = "ایالت / استان";
+"Postal Code" = "کد پستی";
+"Transit Number" = "شماره حمل و نقل";
+"Institution Number" = "شماره موسسه";
+"Australia" = "استرالیا";
+"Canada" = "کانادا";
+"New Zealand" = "نیوزلند";
+"United States" = "ایالات متحده";
+"Singapore" = "سنگاپور";
+"United Kingdom" = "انگلستان";
+"Hong Kong" = "هنگ کنگ";
+"Japan" = "ژاپن";
+"Rounting Number" = "شماره Rounting";
+"SSN Last 4 Digits" = "SSN 4 رقم آخر";
+"Bank Code" = "کد بانک";
+"Branch Code" = "کد شعبه";
+"Sort Code" = "کد طبقه بندی";
+"Clearing Code" = "کد پاکسازی";
+"Branch Code" = "کد شعبه";
+"Bank Name" = "نام بانک";
+"Branch Name" = "نام شعبه";
+"Account Owner Name" = "حساب مالک نام";
+"Phone Number" = "شماره تلفن";
+"Gender" = "جنسیت";
+"Male" = "نر";
+"Female" = "زنان";
+"KanaAddress1" = "KanaAddress1";
+"KanaAddress2" = "KanaAddress2";
+"KanaCity" = "KanaCity";
+"KanaState / Province" = "KanaState / استان";
+"KanaPostal Code" = "کد KanaPostal";
+"IBAN Number" = "شماره IBAN";
+"Please Enter the" = "لطفا وارد";
+"Please update a legal document." = "لطفا یک سند قانونی به روز رسانی.";
+"Server issue, Please try again." = "مسئله سرور، لطفا دوباره امتحان کنید.";
+"Stripe Details" = "جزئیات خط خطی";
+"Device has no camera" = "دستگاه دوربین ندارد";
+"Error" = "خطا";
+"OK" = "خوب";
+"Server issue, Please try again." = "مسئله سرور، لطفا دوباره امتحان کنید.";
+"Take Photo" = "عکس گرفتن";
+"Choose Photo" = "عکس را انتخاب کنید";
+"Cancel" = "لغو";
+
+"Add Payout" = "اضافه کردن پرداخت";
+"Payouts" = " پرداخت";
+"Done" = "انجام شده";
+"Setup your UBER payout method" = "روش پرداخت UBER خود را تنظیم کنید";
+
+"Please enter valid mail id" = "لطفا شناسه معتبر ایمیل را وارد کنید";
+"Delete" = "حذف";
+"Make Default" = " پیش فرض";
+"Submit" = "ارسال";
+"Add" = "اضافه کنید";
+"Default" = "پیش فرض";
+"Rider" = "رایدر";
+
+"Allow Camera" = "اجازه دهید دوربین";
+"Alert" = "هشدار";
+"Camera access required for capturing photos!" = " دسترسی به دوربین مورد نیاز برای گرفتن عکس!";
+"Email ID" = "آدرس ایمیل";
+"Check Status" = "وضعیت را بررسی کنید";
+"CONFIRM YOU'VE ARRIVED" = "تأیید کنید که شما وارد";
+"Rate Your Ride" = "سواری خود را ارزیابی کنید";
+"Pending Trips" = "سفرهای در حال انتظار";
+"Completed Trips" = "سفرهای تکمیل شده";
+"TOTAL TRIPS AMOUNT" = "مجموع کل مبلغ";
+"You have no rating to display" = "شما برای رتبه دادن رتبه ندارید";
+"No vehicle assigned" = "هیچ وسیله نقلیه تعیین نشده است";
+"TRIPS" = "سفر";
+"SWIPE TO " = "جیغ کشیدن به";
+"Bank Details" = "اطلاعات دقیق بانکی";
+"Bank Location" = "محل بانک";
+"BIC/SWIFT Code" = "کد BIC / SWIFT";
+
+"Mobile Verification" =  "تأیید موبایل";
+"Please enter your mobile number" = "لطفا شماره موبایل خود را وارد کنید";
+"LOGIN" = "ورود به سیستم";
+"Enter OTP" = "وارد OTP شوید";
+"We have sent you access code via SMS for mobile number verification" = "ما برای تأیید شماره تلفن همراه شما را از طریق پیام کوتاه برای شما ارسال کرده ایم";
+"Din't Receive the OTP?" =  "OTP را دریافت نمی کنید؟";
+"Resend OTP" = "ارسال مجدد OTP";
+"You can send OTP again in" = "می توانید دوباره OTP را ارسال کنید";
+"Forgot Password?" = "رمز عبور را فراموش کرده اید؟";
+"Your OTP is" = "OTP شما است";

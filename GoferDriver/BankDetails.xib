@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="ClanPro-NarrNews.otf">
+            <string>ClanPro-NarrNews</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" restorationIdentifier="BankDetail" id="E5I-tO-9Hc" customClass="BankDetailsView" customModule="GoferDriver" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="366" height="80"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K1g-aG-0dR">
+                    <rect key="frame" x="0.0" y="0.0" width="366" height="36"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="36" id="dmH-H6-TJc"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="ClanPro-NarrNews" family="Clan Pro" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="he6-Sl-KVC">
+                    <rect key="frame" x="0.0" y="41" width="366" height="38"/>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" name="ClanPro-NarrNews" family="Clan Pro" pointSize="17"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T42-fo-Lx0">
+                    <rect key="frame" x="0.0" y="79" width="366" height="1"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="LwD-Ju-NqS"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="K1g-aG-0dR" firstAttribute="leading" secondItem="mq4-bx-fRK" secondAttribute="leading" id="F9q-o6-Bnn"/>
+                <constraint firstItem="T42-fo-Lx0" firstAttribute="bottom" secondItem="he6-Sl-KVC" secondAttribute="bottom" constant="1" id="Hrj-ag-Ebm"/>
+                <constraint firstItem="mq4-bx-fRK" firstAttribute="trailing" secondItem="K1g-aG-0dR" secondAttribute="trailing" id="K7I-xe-utd"/>
+                <constraint firstItem="T42-fo-Lx0" firstAttribute="leading" secondItem="mq4-bx-fRK" secondAttribute="leading" id="QAw-gb-LU9"/>
+                <constraint firstItem="he6-Sl-KVC" firstAttribute="leading" secondItem="mq4-bx-fRK" secondAttribute="leading" id="QH0-Dp-4zl"/>
+                <constraint firstItem="T42-fo-Lx0" firstAttribute="bottom" secondItem="mq4-bx-fRK" secondAttribute="bottom" id="S9X-Y4-o7m"/>
+                <constraint firstItem="mq4-bx-fRK" firstAttribute="trailing" secondItem="T42-fo-Lx0" secondAttribute="trailing" id="UsS-qc-pfq"/>
+                <constraint firstItem="he6-Sl-KVC" firstAttribute="top" secondItem="K1g-aG-0dR" secondAttribute="bottom" constant="5" id="Uvu-IY-jAv"/>
+                <constraint firstItem="mq4-bx-fRK" firstAttribute="trailing" secondItem="he6-Sl-KVC" secondAttribute="trailing" id="b51-gi-Qcv"/>
+                <constraint firstItem="K1g-aG-0dR" firstAttribute="top" secondItem="mq4-bx-fRK" secondAttribute="top" id="nmX-VB-78n"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="mq4-bx-fRK"/>
+            <connections>
+                <outlet property="label" destination="K1g-aG-0dR" id="BeP-2P-A9G"/>
+                <outlet property="lineLabel" destination="T42-fo-Lx0" id="LEc-Bs-LV0"/>
+                <outlet property="textField" destination="he6-Sl-KVC" id="g8N-Hs-pHS"/>
+            </connections>
+            <point key="canvasLocation" x="249.59999999999999" y="-281.55922038980509"/>
+        </view>
+    </objects>
+</document>
