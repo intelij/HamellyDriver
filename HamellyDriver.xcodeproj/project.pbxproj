@@ -170,6 +170,7 @@
 		43E800CC2021C63800DDA151 /* pickup_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 43E800CB2021C63800DDA151 /* pickup_icon.png */; };
 		43F19DF31FBDCCA100241D11 /* cash.png in Resources */ = {isa = PBXBuildFile; fileRef = 43F19DF21FBDCCA100241D11 /* cash.png */; };
 		6656F7BA23B2B33E00C38D46 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6656F7B923B2B33E00C38D46 /* GoogleService-Info.plist */; };
+		6671F1BF23B4EC25000FA49C /* nothing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6671F1BE23B4EC25000FA49C /* nothing.swift */; };
 		A88644C6D6B342439131F361 /* Pods_GoferDriver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88B1FC3764BE4CDEA596BA75 /* Pods_GoferDriver.framework */; };
 		D101F698225E209900A9FADC /* APIErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = D101F697225E209900A9FADC /* APIErrors.swift */; };
 		D10A7E6D20AC40140083CB46 /* CashModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D10A7E6A20AC40120083CB46 /* CashModel.swift */; };
@@ -443,6 +444,7 @@
 		43F19DF21FBDCCA100241D11 /* cash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cash.png; sourceTree = "<group>"; };
 		57CAAEE70084DB153D915739 /* Pods-GoferDriver.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoferDriver.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GoferDriver/Pods-GoferDriver.debug.xcconfig"; sourceTree = "<group>"; };
 		6656F7B923B2B33E00C38D46 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../../../Adam/Desktop/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		6671F1BE23B4EC25000FA49C /* nothing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = nothing.swift; sourceTree = "<group>"; };
 		88B1FC3764BE4CDEA596BA75 /* Pods_GoferDriver.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GoferDriver.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B51BCB5D114D3F1B4F78E2CA /* Pods-GoferDriver.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoferDriver.release.xcconfig"; path = "Pods/Target Support Files/Pods-GoferDriver/Pods-GoferDriver.release.xcconfig"; sourceTree = "<group>"; };
 		D101F697225E209900A9FADC /* APIErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIErrors.swift; sourceTree = "<group>"; };
@@ -656,6 +658,7 @@
 				43C251F41EF293830094AE74 /* Info.plist */,
 				D131A5C82227C56600C2B9E2 /* InfoPlist.strings */,
 				D151C9A520FDF0680090D3FE /* Localizable.strings */,
+				6671F1BE23B4EC25000FA49C /* nothing.swift */,
 			);
 			path = GoferDriver;
 			sourceTree = "<group>";
@@ -1567,6 +1570,7 @@
 				43C252981EF296B10094AE74 /* ACFloatingTextfield.swift in Sources */,
 				43C2529E1EF296B10094AE74 /* FLAnimatedImage.m in Sources */,
 				43C253831EF299ED0094AE74 /* CountryListVC.swift in Sources */,
+				6671F1BF23B4EC25000FA49C /* nothing.swift in Sources */,
 				D165AC30217DB3FE00C43C53 /* NewTripsDetailsVC.swift in Sources */,
 				43C253621EF299CB0094AE74 /* UberAPICalls.swift in Sources */,
 				D1994DF921FF07E4008A9977 /* PaypalPayoutVC.swift in Sources */,
