@@ -65,7 +65,7 @@ class EarningsVC : UIViewController,UITableViewDelegate, UITableViewDataSource, 
     var dateEndTemp : NSDate = NSDate()
     var arrWeeklyCharyData : NSMutableArray = NSMutableArray()
     var dateFormatter = DateFormatter()
-    var chartModel : EarningsModel!
+    var chartModel : EarningsModel?
     var strCurrency = ""
     var status = ""
     var checkAvailabilityBtn = UIButton()
@@ -403,7 +403,7 @@ class EarningsVC : UIViewController,UITableViewDelegate, UITableViewDataSource, 
         dicts["token"] = Constants().GETVALUE(keyname: USER_ACCESS_TOKEN)
         dicts["start_date"] = String(format:"%@",startDate)
         dicts["end_date"] = String(format:"%@",endDate)
-
+        dicts["user_type"] = "Driver"
         UberAPICalls().PostRequest(dicts,methodName: METHOD_WEEKLY_EARNINGS as NSString, forSuccessionBlock:{(_ response: Any) -> Void in
             let earnModel = response as! EarningsModel
             OperationQueue.main.addOperation {
@@ -424,7 +424,9 @@ class EarningsVC : UIViewController,UITableViewDelegate, UITableViewDataSource, 
                    
                     }
                 }
-                self.setChartWeeklyData()
+                if earnModel.status_code != "0" {
+                    self.setChartWeeklyData()
+                }
                 UberSupport().removeProgressInWindow(viewCtrl: self)
             }
         }, andFailureBlock: {(_ error: Error) -> Void in
@@ -439,7 +441,7 @@ class EarningsVC : UIViewController,UITableViewDelegate, UITableViewDataSource, 
     // SETTING CHART INFO AFTER GETTING WEEKLY INFO
     func setChartWeeklyData()
     {
-        lblWeekCost.text = String(format:"%@ %@",strCurrency,chartModel.total_week_amount)
+        lblWeekCost.text = String(format:"%@ %@",strCurrency,chartModel?.total_week_amount ?? "")
         tblEarnings.reloadData()
         let refs: [Any] = ["M", "TU", "W", "TH", "F", "SA", "SU"]
         var vals: [String] = []
@@ -462,7 +464,7 @@ class EarningsVC : UIViewController,UITableViewDelegate, UITableViewDataSource, 
             
         }
         
-        if Float(chartModel.total_week_amount)! == 0.0
+        if Float(chartModel?.total_week_amount ?? "") == 0.0
         {
             lblTopAmount.text = ""
             lblTopAmount1.text = ""
@@ -476,10 +478,10 @@ class EarningsVC : UIViewController,UITableViewDelegate, UITableViewDataSource, 
         {
             let maxValue = vals.max()
 //            print("maxValue \(maxValue!)")
-            let maxval = Float(maxValue!)
-            let value = (Float(maxValue!)! / 10)
+            let maxval = Float(maxValue ?? "0.1")
+            let value = (Float(maxValue ?? "0.1")) ?? 0.10 / 10.0
             let value1 = Float(value)
-            let add = Int(maxval! + value1)
+            let add = Int(maxval ?? 0.01 + value1)
             lblTopAmount.text = String(add)
             lblTopAmount1.text = String(add/2)
             viewChartHolder.isHidden = false
@@ -578,9 +580,9 @@ class EarningsVC : UIViewController,UITableViewDelegate, UITableViewDataSource, 
         
         if chartModel != nil
         {
-            cell.lblSubTitle.text = indexPath.row == 0 ? String(format:(chartModel.last_trip.count > 0) ? "Last trip: %@ %@" : "Last trip: %@ 0",strCurrency,chartModel.last_trip) : String(format:(chartModel.recent_payout.count > 0) ? "Most recent payout: %@ %@" : "Most recent payout: %@ 0" ,strCurrency, chartModel.recent_payout)
+            cell.lblSubTitle.text = indexPath.row == 0 ? String(format:(chartModel?.last_trip.count ?? 0 > 0) ? "Last trip: %@ %@" : "Last trip: %@ 0",strCurrency,chartModel?.last_trip ?? "") : String(format:(chartModel?.recent_payout.count ?? 0 > 0) ? "Most recent payout: %@ %@" : "Most recent payout: %@ 0" ,strCurrency, chartModel?.recent_payout ?? "")
             
-            cell.lblSubTitle.text = indexPath.row == 0 ? String(format:(chartModel.last_trip.count > 0) ? NSLocalizedString("Last trip: %@ %@", comment: "") : NSLocalizedString("Last trip: %@ 0", comment: ""),strCurrency,chartModel.last_trip) : String(format:(chartModel.recent_payout.count > 0) ? NSLocalizedString("Most recent payout: %@ %@", comment: ""): NSLocalizedString("Most recent payout: %@ 0", comment: "") ,strCurrency, chartModel.recent_payout)
+            cell.lblSubTitle.text = indexPath.row == 0 ? String(format:(chartModel?.last_trip.count ?? 0 > 0) ? NSLocalizedString("Last trip: %@ %@", comment: "") : NSLocalizedString("Last trip: %@ 0", comment: ""),strCurrency,chartModel?.last_trip ?? "") : String(format:(chartModel?.recent_payout.count ?? 0 > 0) ? NSLocalizedString("Most recent payout: %@ %@", comment: ""): NSLocalizedString("Most recent payout: %@ 0", comment: "") ,strCurrency, chartModel?.recent_payout ?? "")
         }
         
         return cell

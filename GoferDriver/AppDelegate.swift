@@ -703,7 +703,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UITabBarControllerDelegat
     }
     
     func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [String : Any], fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
-        
+        print("recieved")
     }
     
     // }
@@ -745,7 +745,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UITabBarControllerDelegat
              completionHandler([.sound])
         }
         
-        self.handlePushNotificaiton(userInfo: (data as? NSDictionary)!)
+        self.handlePushNotificaiton(userInfo: (data as NSDictionary?)!)
         //completionHandler([.sound,.alert])
        
         

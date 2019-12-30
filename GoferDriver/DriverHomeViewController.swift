@@ -31,7 +31,7 @@ class DriverHomeViewController : UIViewController, GMSMapViewDelegate, CLLocatio
                 self.showDriverStatusToast = false
                 self.appDelegate.createToastMessage(dStatus.getString)
             }
-//            self.updateDriverStatus(dStatus: dStatus)
+            self.updateDriverStatus(dStatus: dStatus)
         default:
             print()
         }
@@ -559,7 +559,8 @@ class DriverHomeViewController : UIViewController, GMSMapViewDelegate, CLLocatio
             googleMap.clear()
             driverMarker = GMSMarker()
             driverMarker.position = CLLocationCoordinate2D(latitude: Double(strLatitude)!, longitude: Double(strLongitude)!)
-            driverMarker.icon = UIImage(named: "cartopview2_40.png")
+            driverMarker.icon = UIImage(named: "goferx.png")
+            
             driverMarker.map = googleMap
             driverMarker.isFlat = true
             isCurrentLocationGot = true
@@ -592,7 +593,7 @@ class DriverHomeViewController : UIViewController, GMSMapViewDelegate, CLLocatio
         googleMap.clear()
         let marker2 = GMSMarker()
         marker2.position = CLLocationCoordinate2D(latitude: Double(pickUpLatitude)!, longitude: Double(pickUpLongitude)!)
-        marker2.icon = UIImage(named: "cartopview2_40.png")
+        marker2.icon = UIImage(named: "goferx.png")
         marker2.map = googleMap
         self.moveMapBearing(newLocation: marker2.position)
     }

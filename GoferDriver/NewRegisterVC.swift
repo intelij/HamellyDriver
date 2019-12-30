@@ -231,7 +231,7 @@ class NewRegisterVC: UIViewController,APIViewProtocol {
         let strDeviceType = "1"
         let strDeviceToken = YSSupport.getDeviceToken()
         let strUserType = "Driver"
-        params["new_user"] = "1"
+   //     params["new_user"] = "1"
         params["device_id"] = strDeviceToken ?? ""
         params["device_type"] = strDeviceType
         params["user_type"] = strUserType

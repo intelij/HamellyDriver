@@ -76,10 +76,10 @@ extension UberServiceRequest {
             return
         }
         
-        
+     
         
        let strDeviceToken = YSSupport.getDeviceToken()
-       let strUserType = "Rider"
+       let strUserType = "Driver"
         
         params.forEach { (key,value) in
             paramters[key] = value

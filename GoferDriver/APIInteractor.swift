@@ -73,13 +73,13 @@ class APIInteractor : APIInteractorProtocol,APILoadersProtocol{
             self.shouldLoad(false)
             return self
         }
-        
+        let header : [AnyHashable: Any]  = ["Content-Type":"application/x-www-form-urlencoded","Accept":"application/json","token": Constants().GETVALUE(keyname: USER_ACCESS_TOKEN)]
         self.isFetchingData = true
         Alamofire.request(iApp.APIBaseUrl+api.rawValue,
                           method: api.method,
                           parameters: parameters,
                           encoding: URLEncoding.default,
-                          headers: parameters as? HTTPHeaders)
+                          headers: header as! HTTPHeaders)
             .responseJSON { (response) in
                 self.isFetchingData = false
                 self.shouldLoad(true)

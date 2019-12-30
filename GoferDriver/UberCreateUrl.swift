@@ -239,14 +239,14 @@ class UberCreateUrl: NSObject
 
         if params["google_id"] != nil
         {
-            pairs.add(String(format:"google_id=%@",params["google_id"]  as! NSString))
-            pairs.add("fb_id=")
+//            pairs.add(String(format:"google_id=%@",params["google_id"]  as! NSString))
+//            pairs.add("fb_id=")
             
         }
         else if params["fb_id"] != nil
         {
-            pairs.add(String(format:"fb_id=%@",params["fb_id"]  as! NSString))
-            pairs.add("google_id=")
+//            pairs.add(String(format:"fb_id=%@",params["fb_id"]  as! NSString))
+//            pairs.add("google_id=")
         }
         
         if params["user_image"] != nil

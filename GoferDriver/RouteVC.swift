@@ -1167,7 +1167,7 @@ class RouteVC : UIViewController,GMSMapViewDelegate,CLLocationManagerDelegate,AP
             oldCoordinate = CLLocationCoordinate2DMake(Double(strLatitude)!, Double(strLongitude)!)
             driverMarker = GMSMarker()
             driverMarker.position = CLLocationCoordinate2D(latitude: Double(strLatitude)!, longitude: Double(strLongitude)!)
-            driverMarker.icon = UIImage(named: "cartopview2_40.png")
+            driverMarker.icon = UIImage(named: "cgoferx.png")
             driverMarker.isFlat = true
             driverMarker.map = googleMap
             self.updateCurrentLocationToServer()

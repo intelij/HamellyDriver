@@ -23,7 +23,7 @@ extension Dictionary where Dictionary == JSON{
         if let message =  self["status_message"] as? String, !message.isEmpty{
             return message
         }
-        return self["success_message"] as! String
+        return "Error status " //  self["success_message"] as! String
     }
 
     func value<T>(forKeyPath path : String) -> T?{

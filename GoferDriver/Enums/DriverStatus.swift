@@ -28,7 +28,7 @@ enum DriverStatus : Int{
         case "Document_details":
             return .documentDetails
         default:
-            return .pending
+            return .active
         }
     }
     static func getStatusFromPreference() -> DriverStatus{
@@ -42,6 +42,7 @@ enum DriverStatus : Int{
     }
     func storeInPreference(){
         let prefernce = UserDefaults.standard
+        
         prefernce.set(self.rawValue, forKey: DRIVER_USER_STATUS)
     }
     var getString : String{
