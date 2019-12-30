@@ -38,9 +38,9 @@ class RatingDetailVC : UIViewController,UITableViewDelegate, UITableViewDataSour
     func getRiderFeedBack()
     {
         UberSupport().showProgressInWindow(viewCtrl: self, showAnimation: true)
-        var dicts = [AnyHashable: Any]()
+        var dicts = [String: Any]()
         dicts["token"] =  Constants().GETVALUE(keyname: USER_ACCESS_TOKEN)
-        UberAPICalls().GetRequest(dicts,methodName:METHOD_RIDER_FEEDBACK as NSString, forSuccessionBlock:{(_ response: Any) -> Void in
+        UberAPICalls().PostRequest(dicts,methodName:METHOD_RIDER_FEEDBACK as NSString, forSuccessionBlock:{(_ response: Any) -> Void in
             let gModel = response as! GeneralModel
             OperationQueue.main.addOperation {
                 if gModel.status_code == "1"

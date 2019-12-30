@@ -184,8 +184,8 @@ class DocumentDetailVC: UIViewController, UIImagePickerControllerDelegate, UINav
     // MARK: - Uploading Proifle Picture Operation
     func photoSave(_ photoImage : UIImage, type : String)
     {
-        UberSupport().showProgress(viewCtrl: self, showAnimation: true)
-        let urlString = iApp.APIBaseUrl + "document_upload"
+//        UberSupport().showProgress(viewCtrl: self, showAnimation: true)
+        let urlString = iApp.APIBaseUrl + "document-upload"
         let imageUpload = photoImage.jpegData(compressionQuality: 1.0)
         Alamofire.upload(multipartFormData: { (multipartFormData) in
             let date = Date().timeIntervalSince1970 * 1000
@@ -209,10 +209,10 @@ class DocumentDetailVC: UIViewController, UIImagePickerControllerDelegate, UINav
                         let result : AnyObject = response.result.value as AnyObject
                         if result["status_code"] as? String == "1"{
                             
-                            if result["document_url"] != nil
+                            if result["document-url"] != nil
                             {
                                 self.viewChange.isHidden = false
-                                self.strUserImgUrl = result["document_url"] as? String ?? String()
+                                self.strUserImgUrl = result["document-url"] as? String ?? String()
                             }
                             if result["driver_document_count"] != nil
                             {

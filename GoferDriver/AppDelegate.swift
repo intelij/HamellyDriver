@@ -104,7 +104,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UITabBarControllerDelegat
         {
             self.timerDriverLocation.invalidate()
         }
-        timerDriverLocation = Timer.scheduledTimer(timeInterval: 10.00, target: self, selector: #selector(self.updateCurrentLocationToServer), userInfo: nil, repeats: true)
+        timerDriverLocation = Timer.scheduledTimer(timeInterval: 100.00, target: self, selector: #selector(self.updateCurrentLocationToServer), userInfo: nil, repeats: true)
         _ = PipeLine.fireEvent(withKey : PipeLineKey.app_entered_foreground)
     }
     
@@ -126,7 +126,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UITabBarControllerDelegat
             {
                 self.timerDriverLocation.invalidate()
             }
-            timerDriverLocation = Timer.scheduledTimer(timeInterval: 10.00, target: self, selector: #selector(self.updateCurrentLocationToServer), userInfo: nil, repeats: true)
+            timerDriverLocation = Timer.scheduledTimer(timeInterval: 100.00, target: self, selector: #selector(self.updateCurrentLocationToServer), userInfo: nil, repeats: true)
         }
         else{
             
@@ -148,7 +148,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UITabBarControllerDelegat
         // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
         application.applicationIconBadgeNumber = 0
         application.cancelAllLocalNotifications()
-        self.updateLanguage()
+//        self.updateLanguage()
     }
     
     func applicationWillTerminate(_ application: UIApplication) {
@@ -168,7 +168,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UITabBarControllerDelegat
             }
             DispatchQueue.main.async {
                 
-                self.timerDriverLocation = Timer.scheduledTimer(timeInterval: 10.00, target: self, selector: #selector(self.updateCurrentLocationToServer), userInfo: nil, repeats: true)
+                self.timerDriverLocation = Timer.scheduledTimer(timeInterval: 100.00, target: self, selector: #selector(self.updateCurrentLocationToServer), userInfo: nil, repeats: true)
                 self.timerDriverLocation.fire()
             }
             
@@ -473,10 +473,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UITabBarControllerDelegat
     
     
     func updateLanguage () {
-        var dicts = [AnyHashable: Any]()
+        var dicts = [String: Any]()
         dicts["token"] =  Constants().GETVALUE(keyname: USER_ACCESS_TOKEN)
         dicts["language"] = language
-        UberAPICalls().GetRequest(dicts,methodName:METHOD_LANGUAGE as NSString, forSuccessionBlock:{(_ response: Any) -> Void in
+        UberAPICalls().PostRequest(dicts,methodName:METHOD_LANGUAGE as NSString, forSuccessionBlock:{(_ response: Any) -> Void in
             let endModel = response as! GeneralModel
             
             OperationQueue.main.addOperation {
@@ -497,43 +497,43 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UITabBarControllerDelegat
 //MARK: - API CALL -> UPDATE DRIVER CURRENT LOCATION TO SERVER
      @objc func updateCurrentLocationToServer()
     {
-        var dicts = [AnyHashable: Any]()
-        dicts["token"] =  Constants().GETVALUE(keyname: USER_ACCESS_TOKEN)
-        dicts["latitude"] = Constants().GETVALUE(keyname: USER_LATITUDE)
-        dicts["longitude"] = Constants().GETVALUE(keyname: USER_LONGITUDE)
-        dicts["car_id"] = Constants().GETVALUE(keyname: USER_CAR_ID)
-        dicts["status"] = Constants().GETVALUE(keyname: TRIP_STATUS)
-        if isTripStarted
-        {
-            dicts["total_km"] = self.getDistanceFromPreviousLocation(latitude: strLatitude, longitude: strLongitude)
-            dicts["trip_id"] = strTripID
-            
-        }
-        
-        UberAPICalls().GetRequest(dicts,methodName:METHOD_UPDATING_DRIVER_LOCATION as NSString, forSuccessionBlock:{(_ response: Any) -> Void in
-            let endModel = response as! GeneralModel
-            
-            OperationQueue.main.addOperation {
-                if endModel.status_code == "1"
-                {
-//                    Constants().STOREVALUE(value: "Offline", keyname: USER_ONLINE_STATUS)
-//                    Constants().STOREVALUE(value: "Offline", keyname: TRIP_STATUS)
-                }
-                else
-                {
-                    if endModel.status_message.lowercased() == "please complete your current trip"
-                    {
-                        
-                    }
-                    else
-                    {
-                    }
-                }
-            }
-        }, andFailureBlock: {(_ error: Error) -> Void in
-            OperationQueue.main.addOperation {
-            }
-        })
+//        var dicts = [String: Any]()
+//        dicts["token"] =  Constants().GETVALUE(keyname: USER_ACCESS_TOKEN)
+//        dicts["latitude"] = Constants().GETVALUE(keyname: USER_LATITUDE)
+//        dicts["longitude"] = Constants().GETVALUE(keyname: USER_LONGITUDE)
+//        dicts["car_id"] = Constants().GETVALUE(keyname: USER_CAR_ID)
+//        dicts["status"] = Constants().GETVALUE(keyname: TRIP_STATUS)
+//        if isTripStarted
+//        {
+//            dicts["total_km"] = self.getDistanceFromPreviousLocation(latitude: strLatitude, longitude: strLongitude)
+//            dicts["trip_id"] = strTripID
+//
+//        }
+//
+//        UberAPICalls().PostRequest(dicts,methodName:METHOD_UPDATING_DRIVER_LOCATION as NSString, forSuccessionBlock:{(_ response: Any) -> Void in
+//            let endModel = response as! GeneralModel
+//
+//            OperationQueue.main.addOperation {
+//                if endModel.status_code == "1"
+//                {
+////                    Constants().STOREVALUE(value: "Offline", keyname: USER_ONLINE_STATUS)
+////                    Constants().STOREVALUE(value: "Offline", keyname: TRIP_STATUS)
+//                }
+//                else
+//                {
+//                    if endModel.status_message.lowercased() == "please complete your current trip"
+//                    {
+//
+//                    }
+//                    else
+//                    {
+//                    }
+//                }
+//            }
+//        }, andFailureBlock: {(_ error: Error) -> Void in
+//            OperationQueue.main.addOperation {
+//            }
+//        })
     }
     
     func createRegion(location:CLLocation?) {
@@ -612,49 +612,33 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UITabBarControllerDelegat
         return distanceInKm
         
     }
-    
-    //FCM Get tocken methods
+        // MARK: - Remote Notification Methods // <= iOS 9.x
     func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
-        
         Messaging.messaging().apnsToken = deviceToken
         //InstanceID.instanceID().token()
         InstanceID.instanceID().instanceID { (result, error) in
             if let error = error {
-                print("Error fetching remote instange ID: \(error)")
+                print("______Error fetching remote instange ID: \(error)")
             } else if let result = result {
                 let refreshedToken = result.token
-                print("Remote instance ID token: \(refreshedToken)")
-                print("InstanceID token: \(String(describing: refreshedToken))")
+                print("====Remote instance ID token: \(refreshedToken)")
+                print("====InstanceID token: \(String(describing: refreshedToken))")
                 Constants().STOREVALUE(value: refreshedToken, keyname: USER_DEVICE_TOKEN)
                 let userStatus = self.userDefaults.value(forKey: USER_ACCESS_TOKEN) as? String
                 if (userStatus != nil && userStatus != "")
                 {
                     self.sendDeviceTokenToServer(strToken: refreshedToken)   // UPDATING DEVICE TOKEN FOR LOGGED IN USER
+                    print("\(refreshedToken)")
                 }
                 else{
                     self.tokenRefreshNotification()
                 }
             }
         }
-//        if let refreshedToken = InstanceID.instanceID() {
-//            print("InstanceID token: \(refreshedToken)")
-//
-//            Constants().STOREVALUE(value: refreshedToken, keyname: USER_DEVICE_TOKEN)
-//
-//            //IF LOGGED IN USER ONLY
-//            let userStatus = userDefaults.value(forKey: USER_ACCESS_TOKEN) as? String
-//            if (userStatus != nil && userStatus != "")
-//            {
-//                self.sendDeviceTokenToServer(strToken: refreshedToken)   // UPDATING DEVICE TOKEN FOR LOGGED IN USER
-//            }
-//            else{
-//                tokenRefreshNotification()
-//            }
-//        }
-        
     }
+    // MARK: Get Token Refersh
     
-    // get refersh the token
+
     func tokenRefreshNotification() {
        InstanceID.instanceID().instanceID { (result, error) in
             if let error = error {
@@ -670,6 +654,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UITabBarControllerDelegat
         
         
     }
+    
+    // get refersh the token
+//    func tokenRefreshNotification() {
+//       InstanceID.instanceID().instanceID { (result, error) in
+//            if let error = error {
+//                print("Error fetching remote instange ID: \(error)")
+//            } else if let result = result {
+//                 let refreshedToken = result.token
+//                print("Remote instance ID token: \(refreshedToken)")
+//                print("InstanceID token: \(String(describing: refreshedToken))")
+//                Constants().STOREVALUE(value: refreshedToken, keyname: USER_DEVICE_TOKEN)
+//                self.connectToFcm()
+//            }
+//        }
+//        
+//        
+//    }
     // Cannect the FCM
     func connectToFcm() {
         
@@ -701,7 +702,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UITabBarControllerDelegat
 //        }
     }
     
-    func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any], fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
+    func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [String : Any], fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
         
     }
     
@@ -822,7 +823,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UITabBarControllerDelegat
                 Constants().STOREVALUE(value: "Online", keyname: USER_ONLINE_STATUS)
                 Constants().STOREVALUE(value: "Online", keyname: TRIP_STATUS)
                 let dictTemp = userInfo["trip_payment"] as! NSDictionary
-                let info: [AnyHashable: Any] = [
+                let info: [String: Any] = [
                     "rider_thumb_image" : UberSupport().checkParamTypes(params:dictTemp, keys:"rider_thumb_image"),
                     "trip_id" : UberSupport().checkParamTypes(params:dictTemp, keys:"trip_id"),
                     ]
@@ -982,7 +983,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UITabBarControllerDelegat
     //MARK: ShowRequestPage
     
     func showRequestPage(dict : NSDictionary){
-        var info: [AnyHashable: Any] = [
+        var info: [String: Any] = [
             "pickup_latitude" : UberSupport().checkParamTypes(params:dict, keys:"pickup_latitude"),
             "pickup_longitude" : UberSupport().checkParamTypes(params:dict, keys:"pickup_longitude"),
             "request_id" : UberSupport().checkParamTypes(params:dict, keys:"request_id"),
@@ -1021,35 +1022,48 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UITabBarControllerDelegat
         }
     }
     
+    var s = 0
     
     //MARK: ----- UPDATING DEVICE TO SERVER -----
     func sendDeviceTokenToServer(strToken: String)
     {
-        
-        var dicts = [AnyHashable: Any]()
-        let token = Constants().GETVALUE(keyname: USER_ACCESS_TOKEN)
-        dicts["token"] = Constants().GETVALUE(keyname: USER_ACCESS_TOKEN)
-        dicts["device_id"] = String(format:"%@",strToken)
-//        guard !strToken.isEmpty,!token.isEmpty else {
-//            return
-//        }
-        UberAPICalls().GetRequest(dicts,methodName: METHOD_UPDATE_DEVICE_TOKEN as NSString, forSuccessionBlock:{(_ response: Any) -> Void in
-            let genModel = response as! GeneralModel
-            OperationQueue.main.addOperation {
-                if genModel.status_code == "1"   // Number Not exist
-                {
-                    
-                }
-                else
-                {
-                    self.sendDeviceTokenToServer(strToken: Constants().GETVALUE(keyname :USER_DEVICE_TOKEN))
-                }
+        if s == 0 {
+            var devicetoken = strToken
+            print("aaaaaaaa = \(devicetoken)")
+            if devicetoken.isEmpty {
+                devicetoken = UserDefaults.standard.string(forKey: USER_ACCESS_TOKEN) ?? ""
             }
-        }, andFailureBlock: {(_ error: Error) -> Void in
-            OperationQueue.main.addOperation {
-                self.createToastMessage(iApp.GoferError.server.error, bgColor: UIColor.black, textColor: UIColor.white)
+            guard !devicetoken.isEmpty else {
+                DispatchQueue.main.asyncAfter(deadline: .now()+0.5) {
+                    self.tokenRefreshNotification()
+                }
+                return
             }
-        })
+            var dicts = [String: Any]()
+            dicts["token"] = devicetoken//
+            Constants().GETVALUE(keyname: USER_ACCESS_TOKEN)
+            dicts["device_id"] = String(format:"%@",strToken)
+            UberAPICalls().PostRequest(dicts,methodName: METHOD_UPDATE_DEVICE_TOKEN as NSString, forSuccessionBlock:{(_ response: Any) -> Void in
+                let genModel = response as! GeneralModel
+                OperationQueue.main.addOperation {
+                    if genModel.status_code == "1"   // Number Not exist
+                    {
+                        
+                    }
+                    else
+                    {
+                        //                    self.tokenRefreshNotification()
+                    }
+                    //iApp.HamellyError.server.error
+                }
+            }, andFailureBlock: {(_ error: Error) -> Void in
+                OperationQueue.main.addOperation {
+                    self.createToastMessage(iApp.GoferError.server.error, bgColor: UIColor.black, textColor: UIColor.white)
+                }
+            })
+            s = 1
+            
+        }
     }
     
     // MARK: - Display Toast Message

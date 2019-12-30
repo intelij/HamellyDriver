@@ -8,12 +8,12 @@
 
 import Foundation
 protocol FIRModel {
-    var updateValue : [AnyHashable:Any]{get}
+    var updateValue : [String:Any]{get}
     
 }
 
 extension RiderDetailModel : FIRModel{
-    var updateValue: [AnyHashable:Any]{
+    var updateValue: [String:Any]{
         return ["trip_id":self.getTripID]
     }
     

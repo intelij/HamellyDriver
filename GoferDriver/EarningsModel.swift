@@ -21,7 +21,7 @@ class EarningsModel : NSObject
     var status_code : String = ""
     var last_trip : String = ""
     var recent_payout : String = ""
-    var total_week_amount : String = ""
+    var total_week_amount : String = "0"
     var arrWeeklyData : NSMutableArray = NSMutableArray()
 }
 

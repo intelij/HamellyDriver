@@ -127,14 +127,14 @@ class PaymentEmailVC : UIViewController,UITextFieldDelegate
     // MARK: - API CALL -> ADD/UPDATE PAYPAL EMAIL ID FOR PAYOUT
     @IBAction func onSaveTapped(_ sender:UIButton!)
     {
-        var dicts = [AnyHashable: Any]()
+        var dicts = [String: Any]()
         dicts["token"] = Constants().GETVALUE(keyname: USER_ACCESS_TOKEN)
         dicts["email_id"] = txtFldEmailID.text!
 
         self.view.endEditing(true)
         UberSupport().showProgressInWindow(viewCtrl: self, showAnimation: true)
         
-        UberAPICalls().GetRequest(dicts,methodName: METHOD_UPDATE_PAYPAL_EMAIL as NSString, forSuccessionBlock:{(_ response: Any) -> Void in
+        UberAPICalls().PostRequest(dicts,methodName: METHOD_UPDATE_PAYPAL_EMAIL as NSString, forSuccessionBlock:{(_ response: Any) -> Void in
             let gModel = response as! GeneralModel
             OperationQueue.main.addOperation {
                 UberSupport().removeProgress(viewCtrl: self)

@@ -54,7 +54,8 @@ class APIInteractor : APIInteractorProtocol,APILoadersProtocol{
     func shouldLoad(_ shouldLoad: Bool) {
         self.isLoading = shouldLoad
         if shouldLoad{
-            self.support.showProgressInWindow(showAnimation: true)
+            self.support.showProgressInWindow(showAnimation: false)
+            self.support.removeProgressInWindow()
         }else{
             self.support.removeProgressInWindow()
         }
@@ -78,7 +79,7 @@ class APIInteractor : APIInteractorProtocol,APILoadersProtocol{
                           method: api.method,
                           parameters: parameters,
                           encoding: URLEncoding.default,
-                          headers: nil)
+                          headers: parameters as? HTTPHeaders)
             .responseJSON { (response) in
                 self.isFetchingData = false
                 self.shouldLoad(true)
@@ -187,15 +188,15 @@ class APIInteractor : APIInteractorProtocol,APILoadersProtocol{
             return ResponseEnum.RiderModel(rider)
             
         case .checkDriverStatus:
-            let status = DriverStatus.getStatus(forString : json.string("driver_status"))
+            let status = DriverStatus.getStatus(forString : json.string("driver-check-status"))
             status.storeInPreference()
             return ResponseEnum.driverStatus(status)
             
   
-        case .force_update:
-            let shouldForceUpdate = json.bool("force_update")
-            return ResponseEnum.forceUpdate(shouldForceUpdate)
-            
+//        case .force_update:
+//            let shouldForceUpdate = json.bool("force_update")
+//            return ResponseEnum.forceUpdate(shouldForceUpdate)
+//            return
         default:
             return ResponseEnum.success
         }

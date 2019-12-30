@@ -851,12 +851,12 @@ class RouteVC : UIViewController,GMSMapViewDelegate,CLLocationManagerDelegate,AP
     {
 //        UberSupport().showProgressInWindow(viewCtrl: self, showAnimation: true)
         self.view.isUserInteractionEnabled = false
-        var dicts = [AnyHashable: Any]()
+        var dicts = [String: Any]()
         dicts["token"] =  Constants().GETVALUE(keyname: USER_ACCESS_TOKEN)
         dicts["trip_id"] = riderProfileModel.trip_id
         dicts["begin_latitude"] = strLatitude
         dicts["begin_longitude"] = strLongitude
-        UberAPICalls().GetRequest(dicts,methodName:methodName, forSuccessionBlock:{(_ response: Any) -> Void in
+        UberAPICalls().PostRequest(dicts,methodName:methodName, forSuccessionBlock:{(_ response: Any) -> Void in
             let gModel = response as! GeneralModel
             self.view.isUserInteractionEnabled = true
             
@@ -1229,7 +1229,7 @@ class RouteVC : UIViewController,GMSMapViewDelegate,CLLocationManagerDelegate,AP
             return
         }
         let tracking = self.ref.child("live_tracking")
-        var locationInfo = [AnyHashable: Any]()
+        var locationInfo = [String: Any]()
         locationInfo["lat"] = lat
         locationInfo["lng"] = lng
         tracking.child(strTripID).setValue(locationInfo)
@@ -1239,7 +1239,7 @@ class RouteVC : UIViewController,GMSMapViewDelegate,CLLocationManagerDelegate,AP
     @objc func updateCurrentLocationToServer()
     {
       
-        var dicts = [AnyHashable: Any]()
+        var dicts = [String: Any]()
         dicts["token"] =  Constants().GETVALUE(keyname: USER_ACCESS_TOKEN)
         dicts["latitude"] = strLatitude
         dicts["longitude"] = strLongitude
@@ -1251,7 +1251,7 @@ class RouteVC : UIViewController,GMSMapViewDelegate,CLLocationManagerDelegate,AP
             dicts["trip_id"] = strTripID
         }
         
-        UberAPICalls().GetRequest(dicts,methodName:METHOD_UPDATING_DRIVER_LOCATION as NSString, forSuccessionBlock:{(_ response: Any) -> Void in
+        UberAPICalls().PostRequest(dicts,methodName:METHOD_UPDATING_DRIVER_LOCATION as NSString, forSuccessionBlock:{(_ response: Any) -> Void in
             let endModel = response as! GeneralModel
             OperationQueue.main.addOperation {
                 if endModel.status_code == "1"

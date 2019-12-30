@@ -88,13 +88,13 @@ class CancelRideVC: UIViewController,UITableViewDelegate,UITableViewDataSource,U
         btnSave.isUserInteractionEnabled = false
         UberSupport().showProgressInWindow(viewCtrl: self, showAnimation: true)
         
-        var dicts = [AnyHashable: Any]()
+        var dicts = [String: Any]()
         dicts["token"] = Constants().GETVALUE(keyname: USER_ACCESS_TOKEN)
         dicts["trip_id"] = strTripId
         dicts["cancel_comments"] = txtViewCancel.text!
         dicts["cancel_reason"] = strCancelReason
         
-        UberAPICalls().GetRequest(dicts,methodName: METHOD_CANCEL_TRIP as NSString, forSuccessionBlock:{(_ response: Any) -> Void in
+        UberAPICalls().PostRequest(dicts,methodName: METHOD_CANCEL_TRIP as NSString, forSuccessionBlock:{(_ response: Any) -> Void in
             let gModel = response as! GeneralModel
             OperationQueue.main.addOperation
             {
@@ -102,7 +102,7 @@ class CancelRideVC: UIViewController,UITableViewDelegate,UITableViewDataSource,U
                 {
                     Constants().STOREVALUE(value: "Online", keyname: TRIP_STATUS)
                     NotificationCenter.default.post(name: NSNotification.Name(rawValue: "cancel_trip_by_driver"), object: self, userInfo: nil)
-                    let info: [AnyHashable: Any] = [
+                    let info: [String: Any] = [
                         "cancelled_by" : "YES",
                         ]
                     NotificationCenter.default.post(name: NSNotification.Name(rawValue: "ShowHomePage"), object: self, userInfo: info)

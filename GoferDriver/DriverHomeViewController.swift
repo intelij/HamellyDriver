@@ -31,7 +31,7 @@ class DriverHomeViewController : UIViewController, GMSMapViewDelegate, CLLocatio
                 self.showDriverStatusToast = false
                 self.appDelegate.createToastMessage(dStatus.getString)
             }
-            self.updateDriverStatus(dStatus: dStatus)
+//            self.updateDriverStatus(dStatus: dStatus)
         default:
             print()
         }
@@ -72,13 +72,13 @@ class DriverHomeViewController : UIViewController, GMSMapViewDelegate, CLLocatio
         super.viewDidLoad()
         self.apiInteractor = APIInteractor(self)
         if Shared.instance.resumeTripHitCount == 0{
-            self.apiInteractor?.getResponse(for: .inCompleteTrips).shouldLoad(true)
+            self.apiInteractor?.getResponse(for: .inCompleteTrips).shouldLoad(false)
         }
-        self.apiInteractor?.getResponse(for: .checkDriverStatus).shouldLoad(true)
+        self.apiInteractor?.getResponse(for: .checkDriverStatus).shouldLoad(false)
         
         status = Constants().GETVALUE(keyname: TRIP_STATUS)
         switchButton.transform = CGAffineTransform(scaleX: 0.75, y: 0.75)
-        self.appDelegate.registerForRemoteNotification()
+//        self.appDelegate.registerForRemoteNotification()
         let frame = CGRect(x: 0, y: googleMap.frame.origin.y, width: self.view.frame.size.width, height: self.view.frame.size.height - googleMap.frame.origin.y - 50)
         googleMap.frame = frame
         onChangeMapStyle()
@@ -103,7 +103,7 @@ class DriverHomeViewController : UIViewController, GMSMapViewDelegate, CLLocatio
     }
     
     @IBAction func switchButtonAction(_ sender: Any) {
-        
+         lblOnlineStatus.text = NSLocalizedString("Online", comment: "")
         if switchButton.isOn == true {
             print("On")
             Constants().STOREVALUE(value: "Online", keyname: USER_ONLINE_STATUS)
@@ -281,11 +281,15 @@ class DriverHomeViewController : UIViewController, GMSMapViewDelegate, CLLocatio
     {
     
         let status = Constants().GETVALUE(keyname: USER_STATUS)
+      
         if dStatus != .active
         {
             self.btnCheckStatus.isHidden = false
             self.lblOnlineStatus.isHidden = true
             switchButton.isHidden = true
+//            self.btnCheckStatus.isHidden = true
+//                      self.lblOnlineStatus.isHidden = false
+//                      switchButton.isHidden = false
         }
         else
         {
@@ -303,7 +307,7 @@ class DriverHomeViewController : UIViewController, GMSMapViewDelegate, CLLocatio
     @IBAction func callCheckDriverStatus()
     {
         self.showDriverStatusToast = true
-       self.apiInteractor?.getResponse(for: .checkDriverStatus).shouldLoad(true)
+       self.apiInteractor?.getResponse(for: .checkDriverStatus).shouldLoad(false)
     }
     
     // MARK: WHEN WE WILL GET PUSH NOTIFICATION
@@ -353,13 +357,13 @@ class DriverHomeViewController : UIViewController, GMSMapViewDelegate, CLLocatio
         {
             return
         }
-        var dicts = [AnyHashable: Any]()
+        var dicts = [String: Any]()
         dicts["token"] =  Constants().GETVALUE(keyname: USER_ACCESS_TOKEN)
         dicts["latitude"] = strLatitude
         dicts["longitude"] = strLongitude
         dicts["car_id"] = Constants().GETVALUE(keyname: USER_CAR_ID)
         dicts["status"] = status
-        UberAPICalls().GetRequest(dicts,methodName:METHOD_UPDATING_DRIVER_LOCATION as NSString, forSuccessionBlock:{(_ response: Any) -> Void in
+        UberAPICalls().PostRequest(dicts,methodName:METHOD_UPDATING_DRIVER_LOCATION as NSString, forSuccessionBlock:{(_ response: Any) -> Void in
             let endModel = response as! GeneralModel
             
             OperationQueue.main.addOperation {
@@ -413,13 +417,13 @@ class DriverHomeViewController : UIViewController, GMSMapViewDelegate, CLLocatio
         {
             return
         }
-        var dicts = [AnyHashable: Any]()
+        var dicts = [String: Any]()
         dicts["token"] =  Constants().GETVALUE(keyname: USER_ACCESS_TOKEN)
         dicts["latitude"] = strLatitude
         dicts["longitude"] = strLongitude
         dicts["car_id"] = Constants().GETVALUE(keyname: USER_CAR_ID)
         dicts["status"] = status
-        UberAPICalls().GetRequest(dicts,methodName:METHOD_UPDATING_DRIVER_LOCATION as NSString, forSuccessionBlock:{(_ response: Any) -> Void in
+        UberAPICalls().PostRequest(dicts,methodName:METHOD_UPDATING_DRIVER_LOCATION as NSString, forSuccessionBlock:{(_ response: Any) -> Void in
             let endModel = response as! GeneralModel
             
             OperationQueue.main.addOperation {

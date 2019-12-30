@@ -35,7 +35,7 @@ class OTPVerifyVC : UIViewController
     var strOTPCode = ""
     var strDialNo = ""
 
-    var dictParms = [AnyHashable: Any]()
+    var dictParms = [String: Any]()
     var isFromSignUpPage : Bool = false
     var isFromProfile : Bool = false
     var isFromForgotPassword : Bool = false
@@ -164,7 +164,7 @@ class OTPVerifyVC : UIViewController
         {
             if isFromProfile
             {
-                let info: [AnyHashable: Any] = [
+                let info: [String: Any] = [
                     "phone_no" : strPhoneNo,
                     "dial_no" : strDialNo,
                     ]
@@ -188,7 +188,7 @@ class OTPVerifyVC : UIViewController
     }
     
     // MARK: CALLING API FOR SIGNUP
-    func callSignUpAPI(parms: [AnyHashable: Any])
+    func callSignUpAPI(parms: [String: Any])
     {
         if YSSupport.checkDeviceType()
         {
@@ -205,7 +205,7 @@ class OTPVerifyVC : UIViewController
         }
 
         addProgress()
-        UberAPICalls().GetRequest(parms,methodName: METHOD_SIGNUP as NSString, forSuccessionBlock:{(_ response: Any) -> Void in
+        UberAPICalls().PostRequest(parms,methodName: METHOD_SIGNUP as NSString, forSuccessionBlock:{(_ response: Any) -> Void in
             let loginData = response as! LoginModel
             OperationQueue.main.addOperation {
                 if loginData.status_code == "1"
@@ -298,13 +298,13 @@ class OTPVerifyVC : UIViewController
         passcodeField.resignFirstResponder()
         self.checkNextButtonStatus()
         
-        var dicts = [AnyHashable: Any]()
+        var dicts = [String: Any]()
         dicts["mobile_number"] = strPhoneNo
         if isFromForgotPassword
         {
             dicts["forgotpassword"] = "1"
         }
-        UberAPICalls().GetRequest(dicts,methodName: METHOD_PHONENO_VALIDATION as NSString, forSuccessionBlock:{(_ response: Any) -> Void in
+        UberAPICalls().PostRequest(dicts,methodName: METHOD_PHONENO_VALIDATION as NSString, forSuccessionBlock:{(_ response: Any) -> Void in
             let genData = response as! GeneralModel
             OperationQueue.main.addOperation {
                 if genData.status_code == "1"

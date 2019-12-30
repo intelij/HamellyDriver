@@ -186,13 +186,13 @@ class ProfileVC : UIViewController,UITableViewDelegate, UITableViewDataSource, E
     //MARK: - API CALL -> UPDATE DRIVER CURRENT LOCATION TO SERVER
     func updateCurrentLocationToServer(status: String)
     {
-        var dicts = [AnyHashable: Any]()
+        var dicts = [String: Any]()
         dicts["token"] =  Constants().GETVALUE(keyname: USER_ACCESS_TOKEN)
         dicts["latitude"] = Constants().GETVALUE(keyname: USER_LATITUDE)
         dicts["longitude"] = Constants().GETVALUE(keyname: USER_LONGITUDE)
         dicts["car_id"] = Constants().GETVALUE(keyname: USER_CAR_ID)
         dicts["status"] = status
-        UberAPICalls().GetRequest(dicts,methodName:METHOD_UPDATING_DRIVER_LOCATION as NSString, forSuccessionBlock:{(_ response: Any) -> Void in
+        UberAPICalls().PostRequest(dicts,methodName:METHOD_UPDATING_DRIVER_LOCATION as NSString, forSuccessionBlock:{(_ response: Any) -> Void in
             let endModel = response as! GeneralModel
             
             OperationQueue.main.addOperation {
@@ -234,9 +234,9 @@ class ProfileVC : UIViewController,UITableViewDelegate, UITableViewDataSource, E
     func getUserProfileInfo()
     {
         UberSupport().showProgressInWindow(viewCtrl: self, showAnimation: true)
-        var dicts = [AnyHashable: Any]()
+        var dicts = [String: Any]()
         dicts["token"] = Constants().GETVALUE(keyname: USER_ACCESS_TOKEN)
-        UberAPICalls().GetRequest(dicts,methodName: METHOD_VIEW_PROFILE_INFO as NSString, forSuccessionBlock:{(_ response: Any) -> Void in
+        UberAPICalls().PostRequest(dicts,methodName: METHOD_VIEW_PROFILE_INFO as NSString, forSuccessionBlock:{(_ response: Any) -> Void in
             let proModel = response as! ProfileModel
             OperationQueue.main.addOperation
                 {
@@ -468,9 +468,9 @@ class ProfileVC : UIViewController,UITableViewDelegate, UITableViewDataSource, E
     func callLogoutAPI()
     {
         UberSupport().showProgressInWindow(viewCtrl: self, showAnimation: true)
-        var dicts = [AnyHashable: Any]()
+        var dicts = [String: Any]()
        dicts["token"] =  Constants().GETVALUE(keyname: USER_ACCESS_TOKEN)
-        UberAPICalls().GetRequest(dicts,methodName: METHOD_LOGOUT as NSString, forSuccessionBlock:{(_ response: Any) -> Void in
+        UberAPICalls().PostRequest(dicts,methodName: METHOD_LOGOUT as NSString, forSuccessionBlock:{(_ response: Any) -> Void in
             let gModel = response as! GeneralModel
             OperationQueue.main.addOperation {
                 if gModel.status_code == "1"

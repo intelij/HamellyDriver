@@ -172,12 +172,12 @@ class ResetPasswordVC : UIViewController,UITextFieldDelegate
         addProgress()
         spinnerView.beginRefreshing()
         
-        var dicts = [AnyHashable: Any]()
+        var dicts = [String: Any]()
         dicts["mobile_number"] = String(format:"%@",strMobileNo)
         dicts["country_code"] = String(format:"%@",Constants().GETVALUE(keyname: USER_DIAL_CODE))
         dicts["password"] = String(format:"%@",txtFldPassword.text!)
         
-        UberAPICalls().GetRequest(dicts,methodName: METHOD_UPDATE_PASSWORD as NSString, forSuccessionBlock:{(_ response: Any) -> Void in
+        UberAPICalls().PostRequest(dicts,methodName: METHOD_UPDATE_PASSWORD as NSString, forSuccessionBlock:{(_ response: Any) -> Void in
             let loginData = response as! LoginModel
             OperationQueue.main.addOperation {
                 if loginData.status_code == "1"

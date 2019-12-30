@@ -207,7 +207,7 @@ class MakePaymentVC : UIViewController, UITableViewDelegate, UITableViewDataSour
         var dicts = [AnyHashable: Any]()
         dicts["token"] =  Constants().GETVALUE(keyname: USER_ACCESS_TOKEN)
         dicts["trip_id"] = strTripID
-        UberAPICalls().GetRequest(dicts,methodName:METHOD_CASH_COLLECT as NSString, forSuccessionBlock:{(_ response: Any) -> Void in
+        UberAPICalls().PostRequest(dicts,methodName:METHOD_CASH_COLLECT as NSString, forSuccessionBlock:{(_ response: Any) -> Void in
             let genModel = response as! GeneralModel
             
             OperationQueue.main.addOperation {

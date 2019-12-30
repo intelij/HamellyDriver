@@ -257,12 +257,12 @@ class SignInVC : UIViewController,CountryListDelegate,UITextFieldDelegate
         }
         addProgress()
         self.view.endEditing(true)
-        var dicts = [AnyHashable: Any]()
+        var dicts = [String: Any]()
         dicts["country_code"] = self.lblDialCode.text?.replacingOccurrences(of: "+", with: "") ?? "1"
         dicts["mobile_number"] = String(format:"%@",txtFldPhoneNo.text!)
         dicts["password"] = String(format:"%@",txtFldPassword.text!)
         
-        UberAPICalls().GetRequest(dicts,methodName: METHOD_LOGIN as NSString, forSuccessionBlock:{(_ response: Any) -> Void in
+        UberAPICalls().PostRequest(dicts,methodName: METHOD_LOGIN as NSString, forSuccessionBlock:{(_ response: Any) -> Void in
             let loginData = response as! LoginModel
             OperationQueue.main.addOperation {
                 if loginData.status_code == "1"

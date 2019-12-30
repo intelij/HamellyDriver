@@ -78,24 +78,35 @@
 	<true/>
 	<key>NSAppTransportSecurity</key>
 	<dict>
+		<key>NSTemporaryExceptionAllowsInsecureHTTPLoads</key>
+		<true/>
+		<key>NSAllowsLocalNetworkingUsageDescription</key>
+		<dict/>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+		<key>NSAllowsArbitraryLoadsForMedia</key>
+		<true/>
 		<key>NSAllowsArbitraryLoadsInWebContent</key>
 		<true/>
-		<key>NSAllowsArbitraryLoadsInWebContentUsageDescription</key>
-		<dict>
-			<key>NSATSExceptionThirdPartyServiceConnectionUsage</key>
-			<dict>
-				<key>NSATSExceptionThirdPartyServiceConnectionPurpose</key>
-				<array>
-					<dict/>
-				</array>
-			</dict>
-		</dict>
-		<key>NSAllowsArbitraryLoads</key>
+		<key>NSAllowsLocalNetworking</key>
 		<true/>
 		<key>NSExceptionDomains</key>
 		<dict>
 			<key>New item</key>
 			<string>bsamat.com</string>
+			<key>New item - 2</key>
+			<string>http://192.168.1.152:8000/</string>
+			<key>New item - 3</key>
+			<string>services-apps.net</string>
+			<key>http://192.168.1.152:8000/</key>
+			<dict>
+				<key>NSExceptionRequiresForwardSecrecy</key>
+				<false/>
+				<key>NSIncludesSubdomains</key>
+				<true/>
+				<key>NSExceptionAllowsInsecureHTTPLoads</key>
+				<true/>
+			</dict>
 		</dict>
 	</dict>
 	<key>NSCameraUsageDescription</key>

@@ -14,9 +14,9 @@ enum APIEnums : String{
     case login = "login"
     case register = "register"
     case validateNumber = "numbervalidation"
-    case checkDriverStatus = "check_status"
+    case checkDriverStatus = "driver-check-status"
     
-    case inCompleteTrips = "incomplete_trip_details"
+    case inCompleteTrips = "incomplete-trip-details"
     case getInvoice = "get_invoice"
     case cashCollected = "cash_collected"
     case driver_bank_details = "driver_bank_details"

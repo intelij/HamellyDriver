@@ -145,14 +145,14 @@ class RatingsVC : UIViewController,UITableViewDelegate, UITableViewDataSource,AP
     //MARK: - API CALL -> UPDATE DRIVER CURRENT LOCATION TO SERVER
     func updateCurrentLocationToServer(status: String)
     {
-        var dicts = [AnyHashable: Any]()
+        var dicts = [String: Any]()
         dicts["token"] =  Constants().GETVALUE(keyname: USER_ACCESS_TOKEN)
         dicts["latitude"] = Constants().GETVALUE(keyname: USER_LATITUDE)
         dicts["longitude"] = Constants().GETVALUE(keyname: USER_LATITUDE)
         dicts["car_id"] = Constants().GETVALUE(keyname: USER_CAR_ID)
         dicts["status"] = status
         
-        UberAPICalls().GetRequest(dicts,methodName:METHOD_UPDATING_DRIVER_LOCATION as NSString, forSuccessionBlock:{(_ response: Any) -> Void in
+        UberAPICalls().PostRequest(dicts,methodName:METHOD_UPDATING_DRIVER_LOCATION as NSString, forSuccessionBlock:{(_ response: Any) -> Void in
             let endModel = response as! GeneralModel
             
             OperationQueue.main.addOperation {
@@ -195,10 +195,10 @@ class RatingsVC : UIViewController,UITableViewDelegate, UITableViewDataSource,AP
     func callRatingAPI()
     {
         UberSupport().showProgressInWindow(viewCtrl: self, showAnimation: true)        
-        var dicts = [AnyHashable: Any]()
+        var dicts = [String: Any]()
         dicts["token"] =  Constants().GETVALUE(keyname: USER_ACCESS_TOKEN)
         dicts["user_type"] =  "driver"
-        UberAPICalls().GetRequest(dicts,methodName:METHOD_RATING as NSString, forSuccessionBlock:{(_ response: Any) -> Void in
+        UberAPICalls().PostRequest(dicts,methodName:METHOD_RATING as NSString, forSuccessionBlock:{(_ response: Any) -> Void in
             let rateModel = response as! RatingModel
             
             OperationQueue.main.addOperation {

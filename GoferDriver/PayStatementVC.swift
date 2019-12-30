@@ -29,10 +29,10 @@ class PayStatementVC : UIViewController,UITableViewDelegate, UITableViewDataSour
     func getPayStatement()
     {
         UberSupport().showProgress(viewCtrl: self, showAnimation: true)
-        var dicts = [AnyHashable: Any]()
+        var dicts = [String: Any]()
         dicts["token"] = Constants().GETVALUE(keyname: USER_ACCESS_TOKEN)
         
-        UberAPICalls().GetRequest(dicts,methodName: METHOD_PAY_STATEMENT as NSString, forSuccessionBlock:{(_ response: Any) -> Void in
+        UberAPICalls().PostRequest(dicts,methodName: METHOD_PAY_STATEMENT as NSString, forSuccessionBlock:{(_ response: Any) -> Void in
             let genData = response as! GeneralModel
             OperationQueue.main.addOperation
                 {

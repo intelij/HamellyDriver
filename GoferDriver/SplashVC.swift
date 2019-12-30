@@ -86,8 +86,9 @@ class SplashVC: UIViewController ,APIViewProtocol {
         guard let appVersion = iApp.instance.version else {return}
         var params = Parameters()
         params["version"] = appVersion
-        _ = self.apiInteractor?.getResponse(forAPI: APIEnums.force_update, params: params)
-        
+//        _ = self.apiInteractor?.getResponse(forAPI: APIEnums.force_update, params: params)
+        let appDelegate  = UIApplication.shared.delegate as! AppDelegate
+            appDelegate.onSetRootViewController(viewCtrl:self)
     }
     func shouldForceUpdate(_ should : Bool){
         if should{

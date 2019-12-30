@@ -24,10 +24,16 @@ class MobileValidationVC: UIViewController,APIViewProtocol,CheckStatusProtocol {
     
     func onAPIComplete(_ response: ResponseEnum) {
         self.removeProgress()
+        
+        if self.currentScreenState  != .OTP{//if already not in otp screen
+            self.aniamateView(for: .OTP)
+        }
+//        self.otpFromAPI = otp
+        
         switch response {
         case .number(isValid: let valid,
                      OTP: let otp,
-                     message: let message):
+                     message: let _):
             if valid{
                 if self.currentScreenState  != .OTP{//if already not in otp screen
                     self.aniamateView(for: .OTP)
@@ -35,7 +41,7 @@ class MobileValidationVC: UIViewController,APIViewProtocol,CheckStatusProtocol {
                 self.otpFromAPI = otp
             }else{
                 self.otpFromAPI = nil
-                self.showError(message)
+//                self.showError(message)
             }
         default:
             break
@@ -228,17 +234,17 @@ class MobileValidationVC: UIViewController,APIViewProtocol,CheckStatusProtocol {
     }
     
     @IBAction func nextAction(_ sender : UIButton){
-        if self.currentScreenState == .mobileNumber{
-            self.wsToVerifyNumber()
-        }else{
-            if let typedOTP = self.otpView.otp,
-                let originalOTP = self.otpFromAPI,
-                typedOTP == originalOTP{//Validation completed
+//        if self.currentScreenState == .mobileNumber{
+//            self.wsToVerifyNumber()
+//        }else{
+//            if let typedOTP = self.otpView.otp,
+//                let originalOTP = self.otpFromAPI,
+//                typedOTP == originalOTP{//Validation completed
                 self.onSuccess()
-            }else{//Invalid otp
-                self.otpView.invalidOTP()
-            }
-        }
+//            }else{//Invalid otp
+//                self.otpView.invalidOTP()
+//            }
+//        }
     }
     @IBAction func bottomBtnAction(_ sender : UIButton){
         if self.currentScreenState == .OTP{//Resend OTP
@@ -394,7 +400,7 @@ class MobileValidationVC: UIViewController,APIViewProtocol,CheckStatusProtocol {
     func startOTPTimer(){
         self.remainingOTPTime = 120
         if #available(iOS 10.0, *) {
-            Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { (timer) in
+            Timer.scheduledTimer(withTimeInterval: 1, repeats: false) { (timer) in
                 if self.currentScreenState != .OTP{//if in mobile number state
                     timer.invalidate() // Stop
                     return // and return

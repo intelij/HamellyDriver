@@ -20,7 +20,7 @@ class iApp{
     enum ServerTypes : String{
         case live = "http://gofer.trioangle.com/"
         case demo = "http://gofer.trioangledemo.com/"
-        case enterpriseLocal = "http://bsamat.com/demo/ryde/public/"
+        case enterpriseLocal = "https://api-ksa.com/demo/hamelly/public/index.php/"//"http://192.168.1.152:8000/" //"http://services-apps.net/aqarguide/"//
     }
     
     enum GoogleKeys :String{

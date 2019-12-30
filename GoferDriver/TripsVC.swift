@@ -217,11 +217,11 @@ class TripsVC : UIViewController,UICollectionViewDataSource,UICollectionViewDele
     func callRequestAcceptAPI(tripID: String)
     {
         UberSupport().showProgressInWindow(viewCtrl: self, showAnimation: true)
-        var dicts = [AnyHashable: Any]()
+        var dicts = [String: Any]()
         dicts["token"] =  Constants().GETVALUE(keyname: USER_ACCESS_TOKEN)
         dicts["status"] = "Trip"
         dicts["trip_id"] = tripID
-        UberAPICalls().GetRequest(dicts,methodName: METHOD_GET_RIDER_PROFILE as NSString, forSuccessionBlock:{(_ response: Any) -> Void in
+        UberAPICalls().PostRequest(dicts,methodName: METHOD_GET_RIDER_PROFILE as NSString, forSuccessionBlock:{(_ response: Any) -> Void in
             let gModel = response as! RiderDetailModel
 //            dump(response)
 //            dump(gModel)

@@ -100,7 +100,7 @@ class ChooseVehicle: UIViewController,UITableViewDelegate,UITableViewDataSource,
         UberSupport().showProgressInWindow(viewCtrl: self, showAnimation: true)
         self.view.endEditing(true)
 
-        var dicts = [AnyHashable: Any]()
+        var dicts = [String: Any]()
         
         dicts["token"] = Constants().GETVALUE(keyname: USER_ACCESS_TOKEN)
         dicts["vehicle_id"] = strVehicleId
@@ -108,7 +108,7 @@ class ChooseVehicle: UIViewController,UITableViewDelegate,UITableViewDataSource,
         dicts["vehicle_type"] = strVehicleType
         dicts["vehicle_number"] = txtFldVehicleNumber.text
 
-        UberAPICalls().GetRequest(dicts,methodName: METHOD_UPDATE_VEHICLE_INFO as NSString, forSuccessionBlock:{(_ response: Any) -> Void in
+        UberAPICalls().PostRequest(dicts,methodName: METHOD_UPDATE_VEHICLE_INFO as NSString, forSuccessionBlock:{(_ response: Any) -> Void in
             let gModel = response as! GeneralModel
             OperationQueue.main.addOperation
                 {

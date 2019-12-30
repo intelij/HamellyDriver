@@ -346,7 +346,7 @@ class RegisterVC : UIViewController, UIScrollViewDelegate,UITextFieldDelegate,Co
         self.view.endEditing(true)
         btnSignUp.isUserInteractionEnabled = false
         self.view.endEditing(true)
-        var dicts = [AnyHashable: Any]()
+        var dicts = [String: Any]()
         dicts["email_id"] = String(format:"%@",txtFldEmail.text!)
         dicts["first_name"] = String(format:"%@",txtFldFirstName.text!)
         dicts["last_name"] = String(format:"%@",txtFldLastName.text!)
@@ -355,11 +355,11 @@ class RegisterVC : UIViewController, UIScrollViewDelegate,UITextFieldDelegate,Co
         dicts["city"] = String(format:"%@",txtFldCity.text!)
         self.callSignUpAPI(parms: dicts)
         /*
-        var dicts = [AnyHashable: Any]()
+        var dicts = [String: Any]()
         dicts["mobile_number"] = String(format:"%@",txtFldPhone.text!)
         dicts["country_code"] = String(format:"%@",Constants().GETVALUE(keyname: USER_DIAL_CODE))
         
-        UberAPICalls().GetRequest(dicts,methodName: METHOD_PHONENO_VALIDATION as NSString, forSuccessionBlock:{(_ response: Any) -> Void in
+        UberAPICalls().PostRequest(dicts,methodName: METHOD_PHONENO_VALIDATION as NSString, forSuccessionBlock:{(_ response: Any) -> Void in
             let genModel = response as! GeneralModel
             OperationQueue.main.addOperation {
                 if genModel.status_code == "1"// Number Not exist
@@ -420,7 +420,7 @@ class RegisterVC : UIViewController, UIScrollViewDelegate,UITextFieldDelegate,Co
     func gotoOTPPage(otpCode: String)
     {
         self.view.endEditing(true)
-        var dicts = [AnyHashable: Any]()
+        var dicts = [String: Any]()
         dicts["email_id"] = String(format:"%@",txtFldEmail.text!)
         dicts["first_name"] = String(format:"%@",txtFldFirstName.text!)
         dicts["last_name"] = String(format:"%@",txtFldLastName.text!)
@@ -455,7 +455,7 @@ class RegisterVC : UIViewController, UIScrollViewDelegate,UITextFieldDelegate,Co
         
     }
     // MARK: CALLING API FOR SIGNUP
-    func callSignUpAPI(parms: [AnyHashable: Any])
+    func callSignUpAPI(parms: [String: Any])
     {
         if YSSupport.checkDeviceType()
         {
@@ -472,7 +472,7 @@ class RegisterVC : UIViewController, UIScrollViewDelegate,UITextFieldDelegate,Co
         }
         
         addProgress()
-        UberAPICalls().GetRequest(parms,methodName: METHOD_SIGNUP as NSString, forSuccessionBlock:{(_ response: Any) -> Void in
+        UberAPICalls().PostRequest(parms,methodName: METHOD_SIGNUP as NSString, forSuccessionBlock:{(_ response: Any) -> Void in
             let loginData = response as! LoginModel
             OperationQueue.main.addOperation {
                 if loginData.status_code == "1"

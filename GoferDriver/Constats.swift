@@ -33,7 +33,7 @@ class Constants : NSObject
         let value = UserDefaults.standard.value(forKey: keyname)
         if value == nil
         {
-            return ""
+            return "Active"
         }
         return value as? String ?? String()
     }

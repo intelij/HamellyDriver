@@ -7,7 +7,7 @@
 //
 
 import Foundation
-let DRIVER_USER_STATUS = "user_driver_status"
+let DRIVER_USER_STATUS = "driver-check-status"
 enum DriverStatus : Int{
     case active = 5
     case inActive = 4

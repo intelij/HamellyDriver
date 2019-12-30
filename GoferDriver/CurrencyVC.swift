@@ -48,10 +48,10 @@ class CurrencyVC: UIViewController,UITableViewDelegate, UITableViewDataSource {
      */
     func callCurrencyAPI()
     {
-        var dicts = [AnyHashable: Any]()
+        var dicts = [String: Any]()
         UberSupport().showProgress(viewCtrl: self, showAnimation: true)
         dicts["token"] = Constants().GETVALUE(keyname: USER_ACCESS_TOKEN)
-        UberAPICalls().GetRequest(dicts,methodName: METHOD_CURRENCY_LIST as NSString, forSuccessionBlock:{(_ response: Any) -> Void in
+        UberAPICalls().PostRequest(dicts,methodName: METHOD_CURRENCY_LIST as NSString, forSuccessionBlock:{(_ response: Any) -> Void in
             
             let currencyModel = response as! GeneralModel
             
@@ -189,11 +189,11 @@ class CurrencyVC: UIViewController,UITableViewDelegate, UITableViewDataSource {
     {
         UberSupport().showProgress(viewCtrl: self, showAnimation: true)
         
-        var dicts = [AnyHashable: Any]()
+        var dicts = [String: Any]()
         dicts["token"] =  Constants().GETVALUE(keyname: USER_ACCESS_TOKEN)
         let str = strCurrentCurrency.components(separatedBy: " | ")
         dicts["currency_code"] = str[0]
-        UberAPICalls().GetRequest(dicts,methodName: METHOD_CHANGE_CURRENCY as NSString, forSuccessionBlock:{(_ response: Any) -> Void in
+        UberAPICalls().PostRequest(dicts,methodName: METHOD_CHANGE_CURRENCY as NSString, forSuccessionBlock:{(_ response: Any) -> Void in
             let gModel = response as! GeneralModel
             OperationQueue.main.addOperation {
                 UberSupport().removeProgress(viewCtrl: self)

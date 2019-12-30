@@ -186,12 +186,12 @@ class RequestAcceptVC : UIViewController, ProgressViewHandlerDelegate
         
         clearAllAnimations()
         self.btnAccept.isUserInteractionEnabled = false
-        var dicts = [AnyHashable: Any]()
+        var dicts = [String: Any]()
         dicts["token"] =  Constants().GETVALUE(keyname: USER_ACCESS_TOKEN)
         dicts["status"] = status
         dicts["request_id"] = strRequestID
         
-        UberAPICalls().GetRequest(dicts,methodName: METHOD_CHANGE_DRIVER_STATUS as NSString, forSuccessionBlock:{(_ response: Any) -> Void in
+        UberAPICalls().PostRequest(dicts,methodName: METHOD_CHANGE_DRIVER_STATUS as NSString, forSuccessionBlock:{(_ response: Any) -> Void in
             let gModel = response as! RiderDetailModel
             OperationQueue.main.addOperation
                 {

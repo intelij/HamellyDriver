@@ -142,7 +142,7 @@ class PhoneNoVC : UIViewController,CountryListDelegate,UITextFieldDelegate
         txtFldPhoneNo.resignFirstResponder()
         btnNext.isUserInteractionEnabled = false
         btnVerify.isUserInteractionEnabled = false
-        var dicts = [AnyHashable: Any]()
+        var dicts = [String: Any]()
         dicts["mobile_number"] = String(format:"%@",txtFldPhoneNo.text!)
         dicts["country_code"] = String(format:"%@",Constants().GETVALUE(keyname: USER_DIAL_CODE))
         
@@ -151,7 +151,7 @@ class PhoneNoVC : UIViewController,CountryListDelegate,UITextFieldDelegate
             dicts["forgotpassword"] = "1"
         }
         
-        UberAPICalls().GetRequest(dicts,methodName: METHOD_PHONENO_VALIDATION as NSString, forSuccessionBlock:{(_ response: Any) -> Void in
+        UberAPICalls().PostRequest(dicts,methodName: METHOD_PHONENO_VALIDATION as NSString, forSuccessionBlock:{(_ response: Any) -> Void in
             let genModel = response as! GeneralModel
             OperationQueue.main.addOperation
                 {
@@ -248,7 +248,7 @@ class PhoneNoVC : UIViewController,CountryListDelegate,UITextFieldDelegate
 //        AccountKitHelper.instance.verifyWithView(self, number: given_no, success: { (account) in
 //            if given_no.phoneNumber == account?.phoneNumber?.phoneNumber{
 //                if self.isFromProfile{
-//                    let info: [AnyHashable: Any] = [
+//                    let info: [String: Any] = [
 //                        "phone_no" : given_no.phoneNumber,
 //                        "dial_no" : account?.phoneNumber?.countryCode ?? "01",
 //                        ]
@@ -375,7 +375,7 @@ extension PhoneNoVC : MobileNumberValiadationProtocol{
         if let givenNO = self.givenNumber,
             givenNO.number == number.number{
             if self.isFromProfile{
-                let info: [AnyHashable: Any] = [
+                let info: [String: Any] = [
                     "phone_no" : number.number,
                     "dial_no" : number.flag.dial_code,
                 ]

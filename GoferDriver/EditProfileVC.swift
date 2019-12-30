@@ -690,7 +690,7 @@ class EditProfileVC : UIViewController,UITableViewDelegate, UITableViewDataSourc
     func onSaveProfileTapped()
     {
         UberSupport().showProgressInWindow(viewCtrl: self, showAnimation: true)
-        var dicts = [AnyHashable: Any]()
+        var dicts = [String: Any]()
         dicts["token"] = Constants().GETVALUE(keyname: USER_ACCESS_TOKEN)
         dicts["first_name"] = arrProfileValues[0]
         dicts["last_name"] = arrProfileValues[1]
@@ -702,7 +702,7 @@ class EditProfileVC : UIViewController,UITableViewDelegate, UITableViewDataSourc
         dicts["postal_code"] = arrProfileValues[7]
         dicts["state"] = arrProfileValues[8]
         dicts["profile_image"] = strUserImgUrl
-        UberAPICalls().GetRequest(dicts,methodName: METHOD_UPDATE_PROFILE_INFO as NSString, forSuccessionBlock:{(_ response: Any) -> Void in
+        UberAPICalls().PostRequest(dicts,methodName: METHOD_UPDATE_PROFILE_INFO as NSString, forSuccessionBlock:{(_ response: Any) -> Void in
             let proModel = response as! GeneralModel
             OperationQueue.main.addOperation
                 {
