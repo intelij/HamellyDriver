@@ -3650,5 +3650,53 @@
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BAE8C19D-457A-434F-9F3C-983A71EB5F2B"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GoferDriver/TripsVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "64"
+            endingLineNumber = "64"
+            landmarkName = "getTripsInfo()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "BAE8C19D-457A-434F-9F3C-983A71EB5F2B - 6d6b4d22bbb89aa0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "HamellyDriver.TripsVC.getTripsInfo() -&gt; ()"
+                  moduleName = "HamellyDriver"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Shared/Relocated%20Items/Security/Adam/Gofer-iOS-2.0.1/gofer_driver_ios%202/GoferDriver/TripsVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "64"
+                  endingLineNumber = "64"
+                  offsetFromSymbolStart = "436">
+               </Location>
+               <Location
+                  uuid = "BAE8C19D-457A-434F-9F3C-983A71EB5F2B - 4e7eb03e6701dfdb"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Dictionary&lt;Swift.String, Any&gt;) -&gt; () in HamellyDriver.TripsVC.getTripsInfo() -&gt; ()"
+                  moduleName = "HamellyDriver"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Shared/Relocated%20Items/Security/Adam/Gofer-iOS-2.0.1/gofer_driver_ios%202/GoferDriver/TripsVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "65"
+                  endingLineNumber = "65"
+                  offsetFromSymbolStart = "164">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

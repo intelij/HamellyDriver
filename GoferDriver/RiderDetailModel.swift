@@ -100,7 +100,7 @@ class RiderDetailModel : NSObject {
         self.map_image = json.string("map_image")
         self.total_time = json.string("total_time")
         self.begin_trip = json.string("begin_trip")
-        self.end_trip = json.string("end_trip")
+        self.end_trip = json.string("end-trip")
         self.status = json.string("status")
         self.created_at = json.string("created_at")
         self.updated_at = json.string("updated_at")

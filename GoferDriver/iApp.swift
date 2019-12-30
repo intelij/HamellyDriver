@@ -34,7 +34,7 @@ class iApp{
             case .client:
                 return "239640610908-r2elld96jeo830qpjr9i2cdtunqf9br6.apps.googleusercontent.com"
             case .fire:
-                return "driver_rider_trip_chats"
+                return "driver-rider-trip-chats"
             }
         }
     }

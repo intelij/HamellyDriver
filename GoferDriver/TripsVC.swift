@@ -61,7 +61,7 @@ class TripsVC : UIViewController,UICollectionViewDataSource,UICollectionViewDele
     func getTripsInfo() {
         let paramDict = ["token" : Constants().GETVALUE(keyname: USER_ACCESS_TOKEN),
                          "user_type" : "driver"] as [String : Any]
-        WebServiceHandler.sharedInstance.getWebService(wsMethod:"driver_trips_history", paramDict: paramDict, viewController:self, isToShowProgress:true, isToStopInteraction:true) { (response) in
+        WebServiceHandler.sharedInstance.getWebService(wsMethod:"driver-trips-history", paramDict: paramDict, viewController:self, isToShowProgress:true, isToStopInteraction:true) { (response) in
             let responseJson = response
             DispatchQueue.main.async {
                 if responseJson["status_code"] as? String ?? String() == "1" {

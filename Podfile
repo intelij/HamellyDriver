@@ -13,7 +13,7 @@ target 'GoferDriver' do
     #pod 'APScheduledLocationManager'
     pod 'Firebase/Core'
     pod 'Firebase/Messaging'
-    pod 'Firebase/Database'
+#    pod 'Firebase/Database'
     pod 'Alamofire'
     pod 'TTTAttributedLabel'
     pod 'IQKeyboardManagerSwift'

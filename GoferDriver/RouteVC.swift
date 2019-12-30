@@ -12,7 +12,7 @@ import AVFoundation
 import Foundation
 import GoogleMaps
 //import APScheduledLocationManager
-import FirebaseDatabase
+//import FirebaseDatabase
 import Alamofire
 
 class RouteVC : UIViewController,GMSMapViewDelegate,CLLocationManagerDelegate,APScheduledLocationManagerDelegate,ARCarMovementDelegate,APIViewProtocol
@@ -73,7 +73,7 @@ class RouteVC : UIViewController,GMSMapViewDelegate,CLLocationManagerDelegate,AP
     var moveMent: ARCarMovement!
     var markerAdded = true
     var oldCoordinate: CLLocationCoordinate2D!
-    var ref: DatabaseReference!
+//    var ref: DatabaseReference!
     
     
     //var strTripStaus = ""
@@ -142,7 +142,7 @@ class RouteVC : UIViewController,GMSMapViewDelegate,CLLocationManagerDelegate,AP
         self.update()
         moveMent = ARCarMovement()
         moveMent.delegate = self
-        ref = Database.database().reference()
+//        ref = Database.database().reference()
         cash = Constants().GETVALUE(keyname: CASH_PAYMENT)
         cashView.layer.cornerRadius = 5
         if cash == "Cash & Wallet" || cash == "Cash"{
@@ -930,7 +930,7 @@ class RouteVC : UIViewController,GMSMapViewDelegate,CLLocationManagerDelegate,AP
                 multipartFormData.append(data, withName: "image", fileName: "image.png", mimeType: "image/png")
             }
             
-        },  to: iApp.APIBaseUrl+"end_trip") { (result) in
+        },  to: iApp.APIBaseUrl+"end-trip") { (result) in
             switch result{
             case .success(let upload, _, _):
                 upload.responseJSON { response in
@@ -1228,11 +1228,11 @@ class RouteVC : UIViewController,GMSMapViewDelegate,CLLocationManagerDelegate,AP
             print("no trip found")
             return
         }
-        let tracking = self.ref.child("live_tracking")
+//        let tracking = self.ref.child("live_tracking")
         var locationInfo = [String: Any]()
         locationInfo["lat"] = lat
         locationInfo["lng"] = lng
-        tracking.child(strTripID).setValue(locationInfo)
+//        tracking.child(strTripID).setValue(locationInfo)
         
     }
     // update the location to the server
